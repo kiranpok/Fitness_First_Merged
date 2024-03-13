@@ -39,7 +39,7 @@ const SignUp = () => {
       <form className="signup" onSubmit={handleSubmit}>
         <h2>Sign Up</h2>
 
-        <label>First Name:</label>
+        <label>Name:</label>
         <input
           type="text"
           id="name"
@@ -48,15 +48,7 @@ const SignUp = () => {
           value={name}
           autoComplete="off"
         />
-        <label>Last Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-          autoComplete="off"
-        />
+
         <label>Email address:</label>
         <input
           type="email"
