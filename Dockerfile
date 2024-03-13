@@ -1,22 +1,28 @@
-FROM node
+FROM node:21.6.1
 
-# Set the working directory
-WORKDIR /app
+# Install nodemon globally for backend development
+RUN npm install -g nodemon
 
-# Copy the package.json and package-lock.json files
-COPY package*.json ./
+# Set working directory for backend
+WORKDIR /app/backend
 
-# Delete existing node_modules and package-lock.json
-RUN rm -rf node_modules package-lock.json
+# Copy backend files
+COPY backend .
 
 # Install backend dependencies
 RUN npm install
 
-# Copy the rest of the source code
-COPY . .
+# Set working directory for frontend
+WORKDIR /app/frontend
 
-# Expose port (if necessary)
-EXPOSE 3000
+# Copy frontend files
+COPY frontend .
 
-# Runtime command
+# Install frontend dependencies
+RUN npm install
+
+# Expose ports for both backend and frontend
+EXPOSE 3001 3000
+
+# Start both backend and frontend servers
 CMD ["npm", "start"]
