@@ -15,7 +15,7 @@ const ActivityForm = () => {
 
   const navigate = useNavigate();
 
-  const handleSave = async(e) => {
+  const handleSave = async (e) => {
     e.preventDefault();
 
     if (
@@ -28,7 +28,7 @@ const ActivityForm = () => {
       pace &&
       notes
     ) {
-      const activityData = {
+      /* const activityData = {
         activityName,
         startTime,
         date: selectedDate,
@@ -37,8 +37,7 @@ const ActivityForm = () => {
         distance,
         pace,
         notes,
-      };
-     
+      }; */
 
       // Reset form fields after save
       setActivityName("");
