@@ -1,0 +1,70 @@
+/* activityform.css */
+
+.activity-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .activity-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    margin-top: 20px;
+  }
+  
+  .activity-form h2 {
+    margin-bottom: 16px;
+  }
+  
+  .activity-line {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  
+  .activity-line label {
+    margin-bottom: 8px;
+  }
+  
+  .activity-label input,
+  .activity-label select {
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .activity-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+  
+  .activity-option {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  
+  .activity-option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .activity-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .activity-button:hover {
+    background-color: #45a049;
+  }

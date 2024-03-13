@@ -1,0 +1,56 @@
+/* Main content styles */
+.main-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main-text {
+  flex: 1;
+  margin-right: 20px;
+  margin-top:20px;
+
+}
+
+.fitness1-pic  {
+  position: fixed;
+  width: 425px;
+  height: 531px;
+  left: 1100px;
+  top: 80px;
+  border: 3px;
+  border-radius: 15px;
+}
+
+
+.h1 {
+  font-size: 16px;
+  color:rgb(56, 135, 190) ;
+
+
+}
+
+.h2 {
+  font-size: 16px;
+  color: rgb(56, 65, 157);
+
+
+}
+
+.join-us-button {
+  background-color: rgb(56, 135, 190);
+  color: #171717;
+  padding: 15px 30px;
+  font-size: 15px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 80px;
+
+}
+.h1,
+.h2,
+.join-us-button {
+  margin: 0;
+}

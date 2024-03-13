@@ -1,0 +1,52 @@
+.user-profile-edit-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Add other desktop styles */
+  }
+  
+  .user-profile-edit-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+  
+  .input-label {
+    display: flex;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-right: 275px;
+    justify-content: flex-start;
+    color: #171717;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  .save-button {
+    width: 20%; /* Change this to whatever width you desire */
+    padding: 10px;
+    background-color: #DC3030;
+    color: #fbfcfd;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .save-button:hover {
+    background-color: #0056b3;
+  }
+  

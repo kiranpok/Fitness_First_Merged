@@ -1,0 +1,38 @@
+/* Header styles */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(56, 135, 190);
+  color: #ffffff;
+}
+
+.header h1 {
+  font-size: 24px;
+}
+
+.header a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.header .signup {
+  margin-left: auto;
+}
+
+.header .login {
+  margin-left: 20px;
+}

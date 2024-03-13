@@ -1,0 +1,59 @@
+/* Default styles for desktop screens */
+form.signup,
+form.signin,
+form.forgotpassword {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Add other desktop styles */
+}
+
+/* Customize styles for tablet screens (768px) */
+@media screen and (max-width: 768px) {
+  form.signup,
+  form.signin,
+  form.forgotpassword {
+    max-width: 80%; /* Adjust the width as needed */
+    margin: 20px auto;
+    padding: 10px;
+    /* Add other tablet-specific styles for forms */
+  }
+}
+
+/* Customize styles for mobile screens (576px) */
+@media screen and (max-width: 576px) {
+  form.signup,
+  form.signin,
+  form.forgotpassword {
+    max-width: 90%; /* Adjust the width as needed */
+    margin: 10px auto;
+    padding: 5px;
+    /* Add other mobile-specific styles for forms */
+  }
+
+  /* Customize styles for links within forms on mobile */
+  form.signup a,
+  form.signin a,
+  form.forgotpassword a {
+    /* Add mobile-specific styles for links */
+    display: inline; /* Make links display as block elements */
+    margin-right: 10px; /* Center-align the links */
+    color: #007bff; /* Example link color */
+    text-decoration: none; /* Remove the default text decoration */
+    text-decoration: none; /* Add space between links */
+    transition: color 0.3s ease-in-out; /* Add a smooth transition effect for color */
+  }
+
+  /* Change link color on hover */
+  form.signup a:hover,
+  form.signin a:hover,
+  form.forgotpassword a:hover {
+    color: #333; /* Example link color on hover */
+  }
+}
