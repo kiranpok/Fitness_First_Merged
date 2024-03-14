@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const supertest = require("supertest");
-const app = require("../server");
+const app = require("../app2");
 const User = require("../models/userModel");
 const { requireAuth } = require("../middleware/authMiddleware");
 const { signinUser } = require("../controllers/userController");

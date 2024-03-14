@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1710404954610" clover="3.2.0">
-  <project timestamp="1710404954611" name="All files">
-    <metrics statements="347" coveredstatements="275" conditionals="56" coveredconditionals="30" methods="33" coveredmethods="21" elements="436" coveredelements="326" complexity="0" loc="347" ncloc="347" packages="7" files="16" classes="16"/>
+<coverage generated="1710420101785" clover="3.2.0">
+  <project timestamp="1710420101785" name="All files">
+    <metrics statements="347" coveredstatements="275" conditionals="53" coveredconditionals="29" methods="33" coveredmethods="22" elements="433" coveredelements="326" complexity="0" loc="347" ncloc="347" packages="7" files="16" classes="16"/>
     <package name="backend">
-      <metrics statements="64" coveredstatements="64" conditionals="3" coveredconditionals="1" methods="6" coveredmethods="2"/>
+      <metrics statements="64" coveredstatements="64" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
       <file name="app.js" path="D:\IdeaProjects\Fitness-First-Merged\backend\app.js">
         <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -52,8 +52,8 @@
         <line num="39" count="1" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
       </file>
-      <file name="server.js" path="D:\IdeaProjects\Fitness-First-Merged\backend\server.js">
-        <metrics statements="22" coveredstatements="22" conditionals="3" coveredconditionals="1" methods="2" coveredmethods="0"/>
+      <file name="app2.js" path="D:\IdeaProjects\Fitness-First-Merged\backend\app2.js">
+        <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -63,7 +63,7 @@
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="13" count="1" type="cond" truecount="1" falsecount="2"/>
+        <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
@@ -207,29 +207,29 @@
         <line num="4" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
         <line num="7" count="3" type="stmt"/>
-        <line num="8" count="11" type="stmt"/>
-        <line num="10" count="11" type="cond" truecount="1" falsecount="1"/>
-        <line num="11" count="11" type="stmt"/>
-        <line num="14" count="11" type="stmt"/>
+        <line num="8" count="12" type="stmt"/>
+        <line num="10" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="12" type="stmt"/>
+        <line num="14" count="12" type="stmt"/>
         <line num="18" count="3" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="24" count="3" type="stmt"/>
-        <line num="25" count="12" type="stmt"/>
-        <line num="27" count="12" type="stmt"/>
-        <line num="28" count="12" type="cond" truecount="5" falsecount="0"/>
+        <line num="25" count="13" type="stmt"/>
+        <line num="27" count="13" type="stmt"/>
+        <line num="28" count="13" type="cond" truecount="5" falsecount="0"/>
         <line num="29" count="1" type="stmt"/>
-        <line num="33" count="11" type="stmt"/>
-        <line num="34" count="11" type="stmt"/>
-        <line num="35" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="12" type="stmt"/>
+        <line num="34" count="12" type="stmt"/>
+        <line num="35" count="12" type="cond" truecount="2" falsecount="0"/>
         <line num="36" count="1" type="stmt"/>
-        <line num="38" count="10" type="stmt"/>
-        <line num="39" count="10" type="stmt"/>
-        <line num="40" count="10" type="stmt"/>
-        <line num="41" count="10" type="stmt"/>
-        <line num="47" count="10" type="stmt"/>
-        <line num="48" count="10" type="stmt"/>
-        <line num="50" count="10" type="stmt"/>
+        <line num="38" count="11" type="stmt"/>
+        <line num="39" count="11" type="stmt"/>
+        <line num="40" count="11" type="stmt"/>
+        <line num="41" count="11" type="stmt"/>
+        <line num="47" count="11" type="stmt"/>
+        <line num="48" count="11" type="stmt"/>
+        <line num="50" count="11" type="stmt"/>
         <line num="60" count="0" type="stmt"/>
         <line num="64" count="0" type="stmt"/>
         <line num="69" count="3" type="stmt"/>
@@ -319,11 +319,11 @@
       <file name="customMiddleware.js" path="D:\IdeaProjects\Fitness-First-Merged\backend\middleware\customMiddleware.js">
         <metrics statements="16" coveredstatements="9" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="1" count="3" type="stmt"/>
-        <line num="2" count="28" type="stmt"/>
-        <line num="3" count="28" type="stmt"/>
-        <line num="4" count="28" type="stmt"/>
-        <line num="5" count="28" type="stmt"/>
-        <line num="6" count="28" type="stmt"/>
+        <line num="2" count="29" type="stmt"/>
+        <line num="3" count="29" type="stmt"/>
+        <line num="4" count="29" type="stmt"/>
+        <line num="5" count="29" type="stmt"/>
+        <line num="6" count="29" type="stmt"/>
         <line num="9" count="3" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>

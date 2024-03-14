@@ -5,18 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca62b03c-d0b3-441c-8a61-c58a1f694c65" name="Changes" comment="Dockerfile Added">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/clover.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/coverage-final.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/block-navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/block-navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/app.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/app.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/app1.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/app1.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/config/db.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/config/db.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/config/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/config/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/controllers/activityController.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/controllers/activityController.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/controllers/goalController.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/controllers/goalController.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/controllers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/controllers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/controllers/userController.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/controllers/userController.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/middleware/authMiddleware.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/middleware/authMiddleware.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/middleware/customMiddleware.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/middleware/customMiddleware.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/middleware/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/middleware/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/models/activityModel.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/models/activityModel.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/models/goalModel.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/models/goalModel.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/models/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/models/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/models/userModel.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/models/userModel.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/routes/activityRoutes.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/routes/activityRoutes.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/routes/goalRoutes.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/routes/goalRoutes.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/routes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/routes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/routes/userRoutes.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/routes/userRoutes.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/utils/config.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/utils/config.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/utils/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/utils/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/prettify.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/prettify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/sorter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/sorter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tests/usercontroller.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tests/usercontroller.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,22 +64,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/IdeaProjects/Fitness-First-Merged",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "D:/IdeaProjects/Fitness-First-Merged/backend/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IdeaProjects/Fitness-First-Merged&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;D:/IdeaProjects/Fitness-First-Merged/backend/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tests in tests/" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
@@ -89,6 +108,7 @@
       <workItem from="1710070658106" duration="241000" />
       <workItem from="1710102634188" duration="3016000" />
       <workItem from="1710404725080" duration="936000" />
+      <workItem from="1710419484174" duration="405000" />
     </task>
     <task id="LOCAL-00001" summary="Dockerfile Added">
       <option name="closed" value="true" />
@@ -121,6 +141,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Dockerfile Added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Fitness_First_Merged$Tests_in_tests_.info" NAME="Tests in tests/ Coverage Results" MODIFIED="1710404954716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Fitness_First_Merged$Tests_in_tests_.info" NAME="Tests in tests/ Coverage Results" MODIFIED="1710419726620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

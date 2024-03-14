@@ -10,13 +10,13 @@ const goalRoutes = require("./routes/goalRoutes");
 // express app
 const app = express();
 
-const port = process.env.PORT || 3001;
+const port = 3004;
 connectDB();
-bnbnvbnbbn;
+
 // middlewarestart
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3002"],
+    origin: "http://localhost:3000",
     credentials: true, // Allow credentials (cookies, authorization headers, etc.) to be sent cross-origin
   })
 );
