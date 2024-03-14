@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useGoalsContext } from '../hooks/useGoalsContext';
+import '../styles/goalform.css';
 
 const GoalForm = () => {
     const { dispatch } = useGoalsContext();
@@ -63,7 +64,7 @@ const GoalForm = () => {
 
     return (
         <>
-            <button onClick={() => setFormVisible(true)}>Add a New Goal</button>
+            <button onClick={() => setFormVisible(true)}>Create Goal</button>
             {isFormVisible && (
                 <form className="goal-form" onSubmit={handleSubmit}>
                     <h3>Add a New Goal</h3>

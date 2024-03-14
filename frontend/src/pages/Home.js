@@ -3,12 +3,14 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import "../styles/home.css";
 
-import "../styles/home.css";
+
+
 
 const Home = () => {
   const navigate = useNavigate();
 
   return (
+    <>
     <div className="home-container">
       <div className="main-content">
         <div className="main-text">
@@ -23,8 +25,10 @@ const Home = () => {
         </div>
         <img src="/fitness.png" alt="fitness" className="fitness-pic" />
       </div>
-      <Footer />
+    
     </div>
+    <Footer/>
+    </>
   );
 };
 

@@ -1,36 +1,39 @@
-/* Styles for the signup form */
-.signup {
-    max-width: 400px;
+/* Styles for the goal details */
+.goal {
+    max-width: 300px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 10px;
     background: #ffffff;
     border-radius: 4px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
     text-align: center;
 }
 
-.signup h2 {
+.goal h4 {
     font-size: 24px;
     color: #333333;
     margin-bottom: 20px;
 }
 
-.signup label {
+.goal label {
     display: block;
-    color: #333333;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.signup input[type="text"], .signup input[type="email"], .signup input[type="password"] {
-    width: 100%;
+.goal input {
+    width: 90%;
     padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    box-sizing: border-box;
     margin-bottom: 20px;
+    border: 1px solid #aeb176;
+    border-radius: 4px;
 }
 
-.signup button {
+.goal input.error {
+    border-color: #ff0000;
+}
+
+.goal button {
     background-color: #0066FF;
     color: #FFFFFF;
     padding: 10px 20px;
@@ -38,24 +41,31 @@
     border-radius: 4px;
     cursor: pointer;
     text-transform: uppercase;
+    margin-top: 20px;
+    margin: 10px;
+}
+
+.goal .error {
+    color: #ff0000;
+    font-weight: bold;
 }
 
 /* Responsive styles for smaller devices */
 @media (max-width: 600px) {
-    .signup {
+    .goal {
         width: 90%;
         margin: 20px auto;
     }
 
-    .signup h2 {
+    .goal h4 {
         font-size: 20px;
     }
 
-    .signup input[type="text"], .signup input[type="email"], .signup input[type="password"] {
+    .goal input {
         padding: 8px;
     }
 
-    .signup button {
+    .goal button {
         padding: 8px 16px;
     }
 }

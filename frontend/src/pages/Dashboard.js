@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import GoalDetails from "../components/GoalDetails";
 import GoalForm from "../components/GoalForm";
 import { useGoalsContext } from "../hooks/useGoalsContext";
+import "../styles/dashboard.css";
 
 const Dashboard = () => {
     const { goals, dispatch } = useGoalsContext();

@@ -2,23 +2,31 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "../styles/header.css";
 
 const Header = () => {
   const { isAuthenticated, user, signoutUser } = useAuth();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="header">
-      <div className="logo">Fitness-First</div>
-      <nav className="nav">
-        <Link to="/dashboard">Goals</Link>
-        <Link to="/activityForm">Activities</Link>
+      <Link to="/home" className="logo">Fitness-First</Link>
+      <button className="hamburger-menu" onClick={toggleMenu}>
+        <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+      </button>
+      <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
+        <Link to="/dashboard" onClick={toggleMenu}>Goals</Link>
+        <Link to="/activityForm" onClick={toggleMenu}>Activities</Link>
         <div
           onClick={toggleDropdown}
           style={{ position: "relative", cursor: "pointer" }}
@@ -27,12 +35,10 @@ const Header = () => {
           {dropdownOpen && (
             <div
               style={{
-              
                 backgroundColor: "lightblue",
-  
               }}
             >
-              <Link to="/profile" style={{ display: 'block' }}>
+              <Link to="/profile" style={{ display: 'block' }} onClick={toggleMenu}>
                 Profile
               </Link>
               <button onClick={signoutUser} style={{ display: 'block' }}>
@@ -47,8 +53,8 @@ const Header = () => {
           </span>
         ) : (
           <>
-            <Link to="/signin">Login</Link>
-            <Link to="/signup">Signup</Link>
+            <Link to="/signin" onClick={toggleMenu}>Login</Link>
+            <Link to="/signup" onClick={toggleMenu}>Signup</Link>
           </>
         )}
       </nav>

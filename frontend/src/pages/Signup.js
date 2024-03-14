@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/style.css";
+import "../styles/Signup.css";
 import Footer from "../components/Footer";
 
 const SignUp = () => {
@@ -35,6 +35,7 @@ const SignUp = () => {
   };
 
   return (
+    <>
     <div>
       <form className="signup" onSubmit={handleSubmit}>
         <h2>Sign Up</h2>
@@ -81,8 +82,9 @@ const SignUp = () => {
 
         <button type="submit">Sign Up</button>
       </form>
-      <Footer />
     </div>
+    <Footer />
+    </>
   );
 };
 

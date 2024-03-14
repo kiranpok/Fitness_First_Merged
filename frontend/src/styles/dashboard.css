@@ -1,0 +1,29 @@
+/* Styles for the dashboard */
+.dashboard {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.dashboard .goals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 600px) {
+    .dashboard {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .dashboard .goals {
+        flex-direction: column;
+    }
+}

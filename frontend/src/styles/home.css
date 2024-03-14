@@ -1,56 +1,57 @@
-/* Main content styles */
-.main-content {
+/* home.css */
+
+.home-container {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 .main-text {
-  flex: 1;
-  margin-right: 20px;
-  margin-top:20px;
-
+  max-width: 600px;
 }
 
-.fitness1-pic  {
-  position: fixed;
-  width: 425px;
-  height: 531px;
-  left: 1100px;
-  top: 80px;
-  border: 3px;
-  border-radius: 15px;
-}
-
-
-.h1 {
-  font-size: 16px;
-  color:rgb(56, 135, 190) ;
-
-
-}
-
-.h2 {
-  font-size: 16px;
-  color: rgb(56, 65, 157);
-
-
+.h1, .h2 {
+  margin-bottom: 20px;
 }
 
 .join-us-button {
-  background-color: rgb(56, 135, 190);
-  color: #171717;
-  padding: 15px 30px;
-  font-size: 15px;
-  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 80px;
-
 }
-.h1,
-.h2,
-.join-us-button {
-  margin: 0;
+
+.join-us-button:hover {
+  background-color: #0056b3;
+}
+
+.fitness-pic {
+  max-width: 600px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .main-text, .fitness-pic {
+    max-width: 100%;
+  }
+
+  .join-us-button {
+    margin-top: 20px;
+  }
 }

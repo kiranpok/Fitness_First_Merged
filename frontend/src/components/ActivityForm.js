@@ -28,7 +28,7 @@ const ActivityForm = () => {
       pace &&
       notes
     ) {
-      /* const activityData = {
+      const activityData = {
         activityName,
         startTime,
         date: selectedDate,
@@ -37,7 +37,20 @@ const ActivityForm = () => {
         distance,
         pace,
         notes,
-      }; */
+      };
+
+      // Send the form data to a server
+      const response = await fetch('/api/activities', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(activityData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
 
       // Reset form fields after save
       setActivityName("");

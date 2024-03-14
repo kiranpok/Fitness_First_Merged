@@ -3,6 +3,8 @@ import "../styles/activityList.css";
 import Footer from "./Footer";
 import EditActivityForm from "./EditActivityForm";
 import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 const ActivityList = () => {
   const [activities, setActivities] = useState([]);
@@ -12,7 +14,6 @@ const ActivityList = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch activities from the backend when the component mounts
     fetchActivities();
   }, []);
 
@@ -65,19 +66,23 @@ const ActivityList = () => {
             <div className="details-line">
               <strong>{activity.activityName}</strong>
             </div>
-            <div className="details-line">{activity.activityType}</div>
-            <div className="details-line">{activity.distance} km</div>
-            <div className="details-line">Duration: {activity.duration}</div>
+            <div className="details-line"><strong>Activity Type:</strong>{activity.activityType} </div>
+            <div className="details-line"><strong>Km:</strong>{activity.distance}</div>
+            <div className="details-line"><strong>Duration:</strong> {activity.duration}</div>
           </div>
           <div className="right-side">
             <div className="details-line profile-info">
-              {activity.user} | {activity.date} | {activity.startTime}
+              {activity.user}<strong>Date: </strong>{new Date(activity.date).toLocaleDateString('en-GB')} | {activity.startTime}
             </div>
-            <div className="details-line">{activity.notes}</div>
+            <div className="details-line"> <strong>Note: </strong>{activity.notes}</div>
           </div>
           <div className="buttons">
-            <button onClick={() => handleEdit(activity._id)}>Edit</button>
-            <button onClick={() => handleDelete(activity._id)}>Delete</button>
+            <button onClick={() => handleEdit(activity._id)}>
+              <FontAwesomeIcon icon={faEdit} /> 
+            </button>
+            <button onClick={() => handleDelete(activity._id)}>
+              <FontAwesomeIcon icon={faTrashAlt} /> 
+            </button>
           </div>
 
           {editActivityId && (

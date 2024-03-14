@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useGoalsContext } from '../hooks/useGoalsContext';
-
+import { FaEdit, FaTrash } from 'react-icons/fa';
+import '../styles/goaldetails.css';
 
 const GoalDetails = ({ goal, onDelete }) => {
     const { dispatch } = useGoalsContext();
@@ -97,8 +98,8 @@ const GoalDetails = ({ goal, onDelete }) => {
                     <p><strong>Duration (h): </strong>{goal.duration}</p>
                     <p><strong>Distance (km): </strong>{goal.distance}</p>
                     <p><strong>Date: </strong>{new Date(goal.date).toLocaleDateString('en-GB')}</p>
-                    <button onClick={() => setEditing(true)}>Edit</button>
-                    <button onClick={() => onDelete(goal._id)}>Delete</button>
+                    <button onClick={() => setEditing(true)}><FaEdit /> </button>
+                    <button onClick={() => onDelete(goal._id)}><FaTrash /> </button>
                 </>
             )}
         </div>

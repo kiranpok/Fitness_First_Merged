@@ -1,38 +1,111 @@
-/* Header styles */
-
-body {
-  margin: 0;
-  padding: 0;
-}
-.home-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 20px;
-  background-color: rgb(56, 135, 190);
-  color: #ffffff;
+  background-color: #f8f9fa;
 }
 
-.header h1 {
+.logo {
   font-size: 24px;
-}
-
-.header a {
-  color: #ffffff;
+  font-weight: bold;
+  border: solid 1px rgb(164, 97, 17);
+  padding: 10px;
   text-decoration: none;
-  margin-left: 20px;
 }
 
-.header .signup {
-  margin-left: auto;
+.nav {
+  display: flex;
+  align-items: center;
 }
 
-.header .login {
-  margin-left: 20px;
+.nav a {
+  margin: 15px; /* This applies 0 margin top and bottom, and 15px margin left and right */
+  text-decoration: none;
+  color: #333;
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+
+.nav div {
+  position: relative;
+}
+
+.nav div div {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  padding: 10px;
+ 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.nav div div a,
+.nav div div button {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.nav div div a:hover,
+.nav div div button:hover {
+  color: #007bff;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+  }
+.logo{
+  border: solid 1px rgb(164, 97, 17);
+    width: 140px;
+    text-decoration: none;
+  }
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    margin-bottom: 10px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+   
+  }
+  
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  .nav a {
+    margin: 10px 0 0;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .nav div div {
+    position: absolute;
+    top: 100%;
+    left: 60px;
+    transform: translateX(-50%);
+    width: 200px;
+  
+  }
 }

@@ -1,6 +1,6 @@
-/* Styles for the signup form */
-.signup {
-    max-width: 400px;
+/* Styles for the user profile */
+.user-profile {
+    max-width: 600px;
     margin: 40px auto;
     padding: 20px;
     background: #ffffff;
@@ -9,28 +9,26 @@
     text-align: center;
 }
 
-.signup h2 {
+.user-profile h2 {
     font-size: 24px;
     color: #333333;
     margin-bottom: 20px;
 }
 
-.signup label {
-    display: block;
-    color: #333333;
-    margin-bottom: 5px;
-}
-
-.signup input[type="text"], .signup input[type="email"], .signup input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+.user-profile img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
     margin-bottom: 20px;
 }
 
-.signup button {
+.user-profile p {
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.user-profile .settings-button {
     background-color: #0066FF;
     color: #FFFFFF;
     padding: 10px 20px;
@@ -38,24 +36,26 @@
     border-radius: 4px;
     cursor: pointer;
     text-transform: uppercase;
+    margin-top: 20px;
 }
 
 /* Responsive styles for smaller devices */
 @media (max-width: 600px) {
-    .signup {
+    .user-profile {
         width: 90%;
         margin: 20px auto;
     }
 
-    .signup h2 {
+    .user-profile h2 {
         font-size: 20px;
     }
 
-    .signup input[type="text"], .signup input[type="email"], .signup input[type="password"] {
-        padding: 8px;
+    .user-profile img {
+        width: 80px;
+        height: 80px;
     }
 
-    .signup button {
+    .user-profile .settings-button {
         padding: 8px 16px;
     }
 }
