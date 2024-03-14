@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca62b03c-d0b3-441c-8a61-c58a1f694c65" name="Changes" comment="Dockerfile Added" />
+    <list default="true" id="ca62b03c-d0b3-441c-8a61-c58a1f694c65" name="Changes" comment="Dockerfile Added">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/clover.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/coverage-final.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/block-navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/block-navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/prettify.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/prettify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/sorter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/sorter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,15 +51,32 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/pokha/IdeaProjects/Fitness-First-Pro",
+    "last_opened_file_path": "D:/IdeaProjects/Fitness-First-Merged",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "D:/IdeaProjects/Fitness-First-Merged/backend/node_modules/jest",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Tests in tests/" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/backend/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/backend" />
+      <envs />
+      <scope-kind value="DIRECTORY" />
+      <test-directory value="$PROJECT_DIR$/backend/tests" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Tests in tests/" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,6 +88,7 @@
       <workItem from="1709907953352" duration="24000" />
       <workItem from="1710070658106" duration="241000" />
       <workItem from="1710102634188" duration="3016000" />
+      <workItem from="1710404725080" duration="936000" />
     </task>
     <task id="LOCAL-00001" summary="Dockerfile Added">
       <option name="closed" value="true" />
@@ -88,5 +119,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="Dockerfile Added" />
     <option name="LAST_COMMIT_MESSAGE" value="Dockerfile Added" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Fitness_First_Merged$Tests_in_tests_.info" NAME="Tests in tests/ Coverage Results" MODIFIED="1710404954716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
