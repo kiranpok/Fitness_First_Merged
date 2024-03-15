@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/Signin.css";
+import "../styles/SignIn.css";
 import Footer from "../components/Footer";
 //import UserProfile from "../components/UserProfile";
 
