@@ -20,13 +20,19 @@ const Header = () => {
 
   return (
     <div className="header">
-      <Link to="/home" className="logo">Fitness-First</Link>
+      <Link to="/" className="logo">
+        Fitness-First
+      </Link>
       <button className="hamburger-menu" onClick={toggleMenu}>
         <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
       </button>
-      <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
-        <Link to="/dashboard" onClick={toggleMenu}>Goals</Link>
-        <Link to="/activityForm" onClick={toggleMenu}>Activities</Link>
+      <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
+        <Link to="/dashboard" onClick={toggleMenu}>
+          Goals
+        </Link>
+        <Link to="/activityForm" onClick={toggleMenu}>
+          Activities
+        </Link>
         <div
           onClick={toggleDropdown}
           style={{ position: "relative", cursor: "pointer" }}
@@ -38,23 +44,31 @@ const Header = () => {
                 backgroundColor: "lightblue",
               }}
             >
-              <Link to="/profile" style={{ display: 'block' }} onClick={toggleMenu}>
+              <Link
+                to="/profile"
+                style={{ display: "block" }}
+                onClick={toggleMenu}
+              >
                 Profile
               </Link>
-              <button onClick={signoutUser} style={{ display: 'block' }}>
+              <button onClick={signoutUser} style={{ display: "block" }}>
                 Sign out
               </button>
             </div>
           )}
         </div>
         {isAuthenticated() ? (
-          <span style={{ display: 'inline-block', marginRight: '10px' }}>
+          <span style={{ display: "inline-block", marginRight: "10px" }}>
             Welcome, {user.email}
           </span>
         ) : (
           <>
-            <Link to="/signin" onClick={toggleMenu}>Login</Link>
-            <Link to="/signup" onClick={toggleMenu}>Signup</Link>
+            <Link to="/signin" onClick={toggleMenu}>
+              Login
+            </Link>
+            <Link to="/signup" onClick={toggleMenu}>
+              Signup
+            </Link>
           </>
         )}
       </nav>

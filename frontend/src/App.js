@@ -6,8 +6,6 @@ import EditActivityForm from "./components/EditActivityForm";
 import ActivityStats from "./components/ActivityStats";
 import UserProfileEditForm from "./components/UserProfileEditForm";
 
-
-
 // pages & components
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
@@ -56,7 +54,7 @@ function App() {
           <div className="pages">
             <Routes>
               <Route
-                path="/home"
+                path="/"
                 element={
                   <Home isSignedIn={isSignedIn} activities={activities} />
                 }
