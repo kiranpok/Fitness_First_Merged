@@ -46,7 +46,7 @@ We aim to conduct regular quality checks and take feedback to make sure our appl
 ## Setup instructions
 To set up the Fitness-First-Pro project locally, follow these steps.
 1. clone the Repository:
-   git clone https://github.com/yourname/fitness-first-pro.git
+   git clone https://github.com/kiranpok/Fitness_First_Merged.git
 2. Navigate to the Project Directory:
    cd fitness-first-pro
 4. Install Dependencies:
