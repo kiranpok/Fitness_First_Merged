@@ -4,6 +4,7 @@ import { useAuth } from "../hooks/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "../styles/header.css";
+import LanguageSwitch from "./LanguageSwitch";
 
 const Header = () => {
   const { isAuthenticated, user, signoutUser } = useAuth();
@@ -72,6 +73,7 @@ const Header = () => {
           </>
         )}
       </nav>
+      <LanguageSwitch />
     </div>
   );
 };

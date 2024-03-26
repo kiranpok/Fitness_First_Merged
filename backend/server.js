@@ -32,8 +32,6 @@ app.use("/api/user", userRoutes);
 app.use("/api/activities", activityRoutes);
 app.use("/api/goals", goalRoutes);
 
-
-
 app.use(customMiddleware.unknownEndpoint);
 
 app.use(customMiddleware.errorHandler);

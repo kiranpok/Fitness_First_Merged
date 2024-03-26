@@ -16,6 +16,8 @@ import Header from "./components/Header";
 import UserProfile from "./components/UserProfile";
 import { AuthProvider } from "./hooks/AuthContext"; // Import the AuthProvider
 import Dashboard from "./pages/Dashboard";
+import i18n from "./i18n";
+import { I18nextProvider } from "react-i18next";
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
@@ -42,57 +44,59 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <BrowserRouter>
-        {/* Wrap the components with AuthProvider */}
-        <AuthProvider>
-          <Header
-            isSignedIn={isSignedIn}
-            setIsSignedIn={setIsSignedIn}
-            userEmail={userEmail}
-          />
-          <div className="pages">
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <Home isSignedIn={isSignedIn} activities={activities} />
-                }
-              />
-              <Route
-                path="/activities"
-                element={<ActivityForm onSave={handleSaveActivity} />}
-              />
-              <Route path="/activityList" element={<ActivityList />} />
-              <Route path="/activityStats" element={<ActivityStats />} />
-              <Route path="/activityForm" element={<ActivityForm />} />
-              <Route path="/edit/:id" element={<EditActivityForm />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/profile" element={<UserProfile />} />
+    <I18nextProvider i18n={i18n}>
+      <div className="App">
+        <BrowserRouter>
+          {/* Wrap the components with AuthProvider */}
+          <AuthProvider>
+            <Header
+              isSignedIn={isSignedIn}
+              setIsSignedIn={setIsSignedIn}
+              userEmail={userEmail}
+            />
+            <div className="pages">
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <Home isSignedIn={isSignedIn} activities={activities} />
+                  }
+                />
+                <Route
+                  path="/activities"
+                  element={<ActivityForm onSave={handleSaveActivity} />}
+                />
+                <Route path="/activityList" element={<ActivityList />} />
+                <Route path="/activityStats" element={<ActivityStats />} />
+                <Route path="/activityForm" element={<ActivityForm />} />
+                <Route path="/edit/:id" element={<EditActivityForm />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/profile" element={<UserProfile />} />
 
-              <Route
-                path="/signin"
-                element={
-                  <SignIn
-                    setIsSignIn={setIsSignedIn}
-                    setUserEmail={setUserEmail}
-                  />
-                }
-              />
-              <Route path="/signup" element={<SignUp />} />
-              <Route path="/forgotpassword" element={<ForgetPassword />} />
-              <Route path="/resetpassword" element={<ResetPassword />} />
+                <Route
+                  path="/signin"
+                  element={
+                    <SignIn
+                      setIsSignIn={setIsSignedIn}
+                      setUserEmail={setUserEmail}
+                    />
+                  }
+                />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/forgotpassword" element={<ForgetPassword />} />
+                <Route path="/resetpassword" element={<ResetPassword />} />
 
-              <Route
-                exact
-                path="/profile/edit"
-                component={UserProfileEditForm}
-              />
-            </Routes>
-          </div>
-        </AuthProvider>
-      </BrowserRouter>
-    </div>
+                <Route
+                  exact
+                  path="/profile/edit"
+                  component={UserProfileEditForm}
+                />
+              </Routes>
+            </div>
+          </AuthProvider>
+        </BrowserRouter>
+      </div>
+    </I18nextProvider>
   );
 }
 
