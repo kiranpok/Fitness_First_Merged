@@ -10,9 +10,9 @@ const goalRoutes = require("./routes/goalRoutes");
 // express app
 const app = express();
 
-const port = process.env.PORT || 3001;
+const port = 3004;
 connectDB();
-bnbnvbnbbn;
+
 // middlewarestart
 app.use(
   cors({
@@ -31,8 +31,6 @@ app.get("/", (req, res) => res.send("API Running!"));
 app.use("/api/user", userRoutes);
 app.use("/api/activities", activityRoutes);
 app.use("/api/goals", goalRoutes);
-
-
 
 app.use(customMiddleware.unknownEndpoint);
 

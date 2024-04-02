@@ -5,8 +5,10 @@ import ActivityList from "./components/ActivityList";
 import EditActivityForm from "./components/EditActivityForm";
 import ActivityStats from "./components/ActivityStats";
 import UserProfileEditForm from "./components/UserProfileEditForm";
+
 import i18n from "./i18n";
 import { I18nextProvider } from "react-i18next";
+
 
 
 // pages & components
@@ -59,7 +61,7 @@ function App() {
           <div className="pages">
             <Routes>
               <Route
-                path="/home"
+                path="/"
                 element={
                   <Home isSignedIn={isSignedIn} activities={activities} />
                 }
