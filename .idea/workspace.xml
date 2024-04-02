@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca62b03c-d0b3-441c-8a61-c58a1f694c65" name="Changes" comment="Dockerfile Added" />
+    <list default="true" id="ca62b03c-d0b3-441c-8a61-c58a1f694c65" name="Changes" comment="Dockerfile Added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/userModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/fitness1.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/fitness1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ActivityForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ActivityForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ActivityList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ActivityList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ActivityStats.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ActivityStats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GoalDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GoalDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GoalForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GoalForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UserProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SignIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/authService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/home.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,21 +55,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/pokha/IdeaProjects/Fitness-First-Pro",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Hafiz&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pokha/IdeaProjects/Fitness-First-Pro&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Metropolia\Period3\Project\Fitness_First_Merged\frontend\public" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,6 +87,10 @@
       <workItem from="1709907953352" duration="24000" />
       <workItem from="1710070658106" duration="241000" />
       <workItem from="1710102634188" duration="3016000" />
+      <workItem from="1710495926011" duration="175000" />
+      <workItem from="1710496249157" duration="2412000" />
+      <workItem from="1710839019327" duration="53000" />
+      <workItem from="1712048953319" duration="6995000" />
     </task>
     <task id="LOCAL-00001" summary="Dockerfile Added">
       <option name="closed" value="true" />

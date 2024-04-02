@@ -4,8 +4,12 @@ import { useAuth } from "../hooks/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "../styles/header.css";
+import LanguageSwitch from "./LanguageSwitch";
+import { useTranslation } from "react-i18next";
+
 
 const Header = () => {
+  const { t } = useTranslation();
   const { isAuthenticated, user, signoutUser } = useAuth();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,6 +20,8 @@ const Header = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+
+
   };
 
   return (
@@ -25,8 +31,9 @@ const Header = () => {
         <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
       </button>
       <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
-        <Link to="/dashboard" onClick={toggleMenu}>Goals</Link>
-        <Link to="/activityForm" onClick={toggleMenu}>Activities</Link>
+        <Link to="/dashboard" onClick={toggleMenu}>{t('header.goals')}</Link>
+        <Link to="/activityForm" onClick={toggleMenu}>{t('header.activities')}</Link>
+        
         <div
           onClick={toggleDropdown}
           style={{ position: "relative", cursor: "pointer" }}
@@ -39,10 +46,10 @@ const Header = () => {
               }}
             >
               <Link to="/profile" style={{ display: 'block' }} onClick={toggleMenu}>
-                Profile
+              {t('header.profile')}
               </Link>
               <button onClick={signoutUser} style={{ display: 'block' }}>
-                Sign out
+               {t('header.logout')}
               </button>
             </div>
           )}
@@ -53,13 +60,18 @@ const Header = () => {
           </span>
         ) : (
           <>
-            <Link to="/signin" onClick={toggleMenu}>Login</Link>
-            <Link to="/signup" onClick={toggleMenu}>Signup</Link>
+            <Link to="/signin" onClick={toggleMenu}> {t('header.login')}</Link>
+            <Link to="/signup" onClick={toggleMenu}> {t('header.signup')}</Link>
           </>
+         
+          
         )}
+         <LanguageSwitch />
       </nav>
+      
     </div>
   );
+  
 };
 
 export default Header;

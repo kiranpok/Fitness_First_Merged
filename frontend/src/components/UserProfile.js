@@ -4,8 +4,11 @@ import UserProfileEditForm from "./UserProfileEditForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCog } from "@fortawesome/free-solid-svg-icons";
 import "../styles/profile.css";
+import { useTranslation } from 'react-i18next';
+
 
 const UserProfile = () => {
+  const { t } = useTranslation();
   const [userProfile, setUserProfile] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -58,7 +61,7 @@ const UserProfile = () => {
         {updateSuccess && <p>Profile updated successfully!</p>}
         {userProfile && (
           <div>
-            <h2>User Profile</h2>
+            <h2>{t('profile.title')}</h2>
             <img
               src={
                 (updatedProfileData && updatedProfileData.avatar) ||
@@ -72,10 +75,10 @@ const UserProfile = () => {
               {(updatedProfileData && updatedProfileData.name) || userProfile.name}, 
               {(updatedProfileData && updatedProfileData.email) || userProfile.email}
             </p>
-            <p>Gender: {(updatedProfileData && updatedProfileData.gender) || userProfile.gender}</p>
-            <p>Birthdate: {(updatedProfileData && updatedProfileData.birthdate) || userProfile.birthdate}</p>
-            <p>Height: {(updatedProfileData && updatedProfileData.height) || userProfile.height}</p>
-            <p>Weight: {(updatedProfileData && updatedProfileData.weight) || userProfile.weight}</p>
+            <p>{t('profile.gender')} {(updatedProfileData && updatedProfileData.gender) || userProfile.gender}</p>
+            <p>{t('profile.birth_date')} {(updatedProfileData && updatedProfileData.birthdate) || userProfile.birthdate}</p>
+            <p>{t('profile.height')} {(updatedProfileData && updatedProfileData.height) || userProfile.height}</p>
+            <p>{t('profile.weight')} {(updatedProfileData && updatedProfileData.weight) || userProfile.weight}</p>
             {isEditing ? (
               <UserProfileEditForm
                 userProfileData={userProfile}
@@ -87,7 +90,7 @@ const UserProfile = () => {
                 className="settings-button"
                 onClick={() => setIsEditing(true)}
               >
-                <FontAwesomeIcon icon={faCog} /> Update Profile
+                <FontAwesomeIcon icon={faCog} /> {t('profile.button')}
               </button>
             )}
           </div>
