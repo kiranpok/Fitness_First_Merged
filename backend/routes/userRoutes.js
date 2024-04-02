@@ -1,5 +1,3 @@
-// user.js
-const console = require("console");
 const express = require("express");
 const router = express.Router();
 const { requireAuth } = require("../middleware/authMiddleware");
@@ -17,11 +15,6 @@ const {
   deleteUserProfile,
 } = require("../controllers/userController");
 
-// Import the new controller functions
-
-/* router.get("/", (req, res) => {
-  res.send("Hello, Express!");
-}); */
 // Sign-in route
 router.post("/signin", signinUser);
 
@@ -43,7 +36,7 @@ router.get("/profile", requireAuth, getUserProfile);
 // Update user profile route
 router.put("/profile", requireAuth, updateUserProfile);
 
-//delete user profile route
+// Delete user profile route
 router.delete("/profile", requireAuth, deleteUserProfile);
 
 module.exports = router;

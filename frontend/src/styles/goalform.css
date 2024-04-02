@@ -1,0 +1,98 @@
+/* Styles for the goal form */
+.goal-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.goal-form h3 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.goal-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.goal-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.goal-form input.error {
+    border-color: #ff0000;
+}
+
+.goal-form button[type="submit"] {
+    background-color: #0066FF;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.goal-form button[type="button"] {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin: 10px;
+}
+button {
+    background-color: #0066FF;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #004cb7;
+}
+.goal-form .error {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 600px) {
+    .goal-form {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .goal-form h3 {
+        font-size: 20px;
+    }
+
+    .goal-form input {
+        padding: 8px;
+    }
+
+    .goal-form button[type="submit"],
+    .goal-form button[type="button"] {
+        padding: 8px 16px;
+    }
+}

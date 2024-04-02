@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "../styles/style.css";
+import {Link, useNavigate } from "react-router-dom";
+import "../styles/Signup.css";
 import Footer from "../components/Footer";
+import { useTranslation } from 'react-i18next';
 
 const SignUp = () => {
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -35,54 +37,61 @@ const SignUp = () => {
   };
 
   return (
-    <div>
-      <form className="signup" onSubmit={handleSubmit}>
-        <h2>Sign Up</h2>
+      <>
+        <div>
+          <form className="signup" onSubmit={handleSubmit}>
+            <h2>{t('signup.title')}</h2>
 
-        <label>Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-          autoComplete="off"
-        />
+            <label>{t('signup.name')}</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                autoComplete="off"
+            />
 
-        <label>Email address:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-          autoComplete="off"
-        />
+            <label>{t('signup.email')}</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                autoComplete="off"
+            />
 
-        <label>Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
-          autoComplete="off"
-        />
+            <label>{t('signup.password')}</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                autoComplete="off"
+            />
 
-        <label>Confirm Password:</label>
-        <input
-          type="password"
-          id="confirmpassword"
-          name="confirmpassword"
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          value={confirmPassword}
-          autoComplete="off"
-        />
+            <label>{t('signup.confirm_password')}</label>
+            <input
+                type="password"
+                id="confirmpassword"
+                name="confirmpassword"
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                value={confirmPassword}
+                autoComplete="off"
+            />
 
-        <button type="submit">Sign Up</button>
-      </form>
-      <Footer />
-    </div>
+            <button type="submit">{t('signup.signup')}</button>
+            <div>
+            <p>
+            {t('signup.account')} <Link to="/login">{t('login.login')}</Link>
+            </p>
+          </div>
+          </form>
+        </div>
+        <Footer />
+      </>
   );
 };
 

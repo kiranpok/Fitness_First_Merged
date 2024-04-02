@@ -1,32 +1,73 @@
-/* activitylist.css */
+/* activityList.css */
 
 .activity-list-container {
-    margin: 20px;
-  }
+  margin: 20px;
   
-  h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  border: 1px solid #ccc; /* Lighter Gray */
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+strong {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.activity-item {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc; /* Lighter Gray */
+  border-radius: 5px;
+}
+
+.left-side, .right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
   
-  ul {
-    list-style: none;
-    padding: 0;
+}
+
+.delete-prompt {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsive design for smaller devices */
+@media (max-width: 600px) {
+  .activity-item {
+    flex-direction: column;
   }
-  
-  li {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
+
+  .buttons {
+    flex-direction: column;
   }
-  
-  strong {
-    font-size: 18px;
-    display: block;
-    margin-bottom: 5px;
+
+  .delete-prompt {
+    font-size: 14px;
   }
-  
-  p {
-    margin: 5px 0;
-  }
+}

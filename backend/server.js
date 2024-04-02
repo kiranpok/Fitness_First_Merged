@@ -16,7 +16,7 @@ bnbnvbnbbn;
 // middlewarestart
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3002"],
+    origin: "http://localhost:3000",
     credentials: true, // Allow credentials (cookies, authorization headers, etc.) to be sent cross-origin
   })
 );
@@ -31,6 +31,8 @@ app.get("/", (req, res) => res.send("API Running!"));
 app.use("/api/user", userRoutes);
 app.use("/api/activities", activityRoutes);
 app.use("/api/goals", goalRoutes);
+
+
 
 app.use(customMiddleware.unknownEndpoint);
 

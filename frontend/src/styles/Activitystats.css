@@ -1,0 +1,26 @@
+/* ActivityStats.css */
+
+/* Make the charts responsive */
+#distanceChart, #durationChart, #totalActivitiesChart {
+    width: 100%;
+    height: auto;
+}
+
+/* Style the container */
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style the title */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Media query for small devices */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.2em;
+    }
+}

@@ -6,6 +6,11 @@ import EditActivityForm from "./components/EditActivityForm";
 import ActivityStats from "./components/ActivityStats";
 import UserProfileEditForm from "./components/UserProfileEditForm";
 
+import i18n from "./i18n";
+import { I18nextProvider } from "react-i18next";
+
+
+
 // pages & components
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
@@ -18,6 +23,8 @@ import { AuthProvider } from "./hooks/AuthContext"; // Import the AuthProvider
 import Dashboard from "./pages/Dashboard";
 
 function App() {
+ 
+ 
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [userEmail, setUserEmail] = useState("");
   const [activities, setActivities] = useState([]);
@@ -42,9 +49,9 @@ function App() {
   };
 
   return (
+    <I18nextProvider i18n={i18n}>
     <div className="App">
       <BrowserRouter>
-        {/* Wrap the components with AuthProvider */}
         <AuthProvider>
           <Header
             isSignedIn={isSignedIn}
@@ -93,6 +100,7 @@ function App() {
         </AuthProvider>
       </BrowserRouter>
     </div>
+    </I18nextProvider>
   );
 }
 

@@ -1,87 +1,83 @@
-.signin-form {
+/* Styles for the signin form */
+.signin {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
     text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.signin-title {
-    text-align: center;
-    margin-bottom: 40px;
+.signin h2 {
     font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
 }
 
-.dont-have-account{
-    margin-bottom: 10px;
-    text-align: center;
-    color: #171717;
-
-}
-.signup-link {
-    margin-bottom: 10px;
-    text-align: center;
-    color: #171717;
-    text-decoration: underline;
-}
-
-.email-label {
-    display: flex;
+.signin label {
+    display: block;
+    color: #333333;
     margin-bottom: 5px;
-    text-align: left;
-    margin-right: 275px;
-    justify-content: flex-start;
-    color:#171717;
-}
-.password-label {
-    display: flex;
-    margin-bottom: 5px;
-    text-align: left;
-    margin-right: 300px;
-    justify-content: flex-start;
-    color:#171717;
 }
 
-.email-input, .password-input {
+.signin input[type="email"], .signin input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #a2c11c;
-    border-radius: 3px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
     box-sizing: border-box;
-
+    margin-bottom: 20px;
 }
 
-.signin-button {
-    width: 20%; /* Change this to whatever width you desire */
-    padding: 10px;
-    background-color: darkslategrey;
-    color: #171717;
+.signin button {
+    background-color: #0066FF;
+    color: #FFFFFF;
+    padding: 10px 20px;
     border: none;
-    border-radius: 3px;
+    border-radius: 4px;
     cursor: pointer;
-    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
-.signin-button:hover {
-
-    background-color: #0056b3;
+.signin nav {
+    margin-top: 20px;
 }
 
-.forgot-password-link {
-    text-align: center;
+.signin nav p {
+    font-size: 14px;
+    color: #333333;
 }
 
-.forgot-password-link a {
-    color: #171717;
+.signin nav p a {
+    color: #0066FF;
     text-decoration: none;
 }
 
-.forgot-password-link a:hover {
+.signin nav p a:hover {
     text-decoration: underline;
 }
 
+/* Responsive styles for smaller devices */
+@media (max-width: 600px) {
+    .signin {
+        width: 90%;
+        margin: 20px auto;
+    }
 
+    .signin h2 {
+        font-size: 20px;
+    }
+
+    .signin input[type="email"], .signin input[type="password"] {
+        padding: 8px;
+    }
+
+    .signin button {
+        padding: 8px 16px;
+    }
+
+    .signin nav p {
+        font-size: 12px;
+    }
+}

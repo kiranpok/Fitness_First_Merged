@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/style.css";
 import Footer from "../components/Footer";
+import { useTranslation } from 'react-i18next';
+
 //import UserProfile from "../components/UserProfile";
 
 const SignIn = ({ setIsSignIn, setUserEmail }) => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -52,8 +55,8 @@ const SignIn = ({ setIsSignIn, setUserEmail }) => {
   return (
     <div>
       <form className="signin" onSubmit={handleSignin}>
-        <h2>Sign In</h2>
-        <label>Email address:</label>
+        <h2>{t('login.title')}</h2>
+        <label>{t('login.email')}</label>
         <input
           type="email"
           id="email"
@@ -62,7 +65,7 @@ const SignIn = ({ setIsSignIn, setUserEmail }) => {
           value={email}
           autoComplete="off"
         />
-        <label>Password:</label>
+        <label>{t('login.password')}</label>
         <input
           type="password"
           id="password"
@@ -72,17 +75,17 @@ const SignIn = ({ setIsSignIn, setUserEmail }) => {
           autoComplete="off"
         />
 
-        <button type="submit">Sign In</button>
+        <button type="submit">{t('login.login')}</button>
 
         <nav>
           <div>
             <p>
-              Don't have an account? <Link to="/signup">Sign Up</Link>
+            {t('login.account')} <Link to="/signup">{t('login.signup')}</Link>
             </p>
           </div>
           <div>
             <p>
-              <Link to="/forgotpassword">ForgetPassword?</Link>
+              <Link to="/forgotpassword">{t('login.forgot_password')}</Link>
             </p>
           </div>
         </nav>

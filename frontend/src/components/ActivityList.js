@@ -3,8 +3,13 @@ import "../styles/activityList.css";
 import Footer from "./Footer";
 import EditActivityForm from "./EditActivityForm";
 import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from 'react-i18next';
+
 
 const ActivityList = () => {
+  const { t } = useTranslation();
   const [activities, setActivities] = useState([]);
   const [editActivityId, setEditActivityId] = useState(null);
   const [showDeletePrompt, setShowDeletePrompt] = useState(false);
@@ -12,7 +17,6 @@ const ActivityList = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch activities from the backend when the component mounts
     fetchActivities();
   }, []);
 
@@ -63,21 +67,25 @@ const ActivityList = () => {
         <div key={activity._id} className="activity-item">
           <div className="left-side">
             <div className="details-line">
-              <strong>{activity.activityName}</strong>
+              <strong>{t('activity_list.name')}</strong>{activity.activityName}
             </div>
-            <div className="details-line">{activity.activityType}</div>
-            <div className="details-line">{activity.distance} km</div>
-            <div className="details-line">Duration: {activity.duration}</div>
+            <div className="details-line"><strong>{t('activity_list.activity_type')}</strong>{activity.activityType} </div>
+            <div className="details-line"><strong>{t('activity_list.distance')}</strong>{activity.distance}</div>
+            <div className="details-line"><strong>{t('activity_list.duration')}</strong> {activity.duration}</div>
           </div>
           <div className="right-side">
             <div className="details-line profile-info">
-              {activity.user} | {activity.date} | {activity.startTime}
+              {activity.user}<strong>{t('activity_list.date')} </strong>{new Date(activity.date).toLocaleDateString('en-GB')} | {activity.startTime}
             </div>
-            <div className="details-line">{activity.notes}</div>
+            <div className="details-line"> <strong>{t('activity_list.notes')} </strong>{activity.notes}</div>
           </div>
           <div className="buttons">
-            <button onClick={() => handleEdit(activity._id)}>Edit</button>
-            <button onClick={() => handleDelete(activity._id)}>Delete</button>
+            <button onClick={() => handleEdit(activity._id)}>
+              <FontAwesomeIcon icon={faEdit} /> 
+            </button>
+            <button onClick={() => handleDelete(activity._id)}>
+              <FontAwesomeIcon icon={faTrashAlt} /> 
+            </button>
           </div>
 
           {editActivityId && (
@@ -88,9 +96,9 @@ const ActivityList = () => {
           )}
           {showDeletePrompt && (
             <div className="delete-prompt">
-              <p>Are you sure you want to delete this activity?</p>
-              <button onClick={handleDeleteConfirm}>Ok</button>
-              <button onClick={handleDeleteCancel}>Cancel</button>
+              <p>{t('activity_list.para')}</p>
+              <button onClick={handleDeleteConfirm}>{t('activity_list.ok')}</button>
+              <button onClick={handleDeleteCancel}>{t('activity_list.cancel')}</button>
             </div>
           )}
         </div>

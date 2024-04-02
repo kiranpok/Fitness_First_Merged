@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca62b03c-d0b3-441c-8a61-c58a1f694c65" name="Changes" comment="Dockerfile Added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/backend/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/clover.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/coverage-final.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/app.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/coverage/lcov-report/backend/app.js.html" afterDir="false" />
@@ -36,65 +37,12 @@
       <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/tests/usercontroller.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tests/usercontroller.test.js" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Dockerfile" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 0
-}</component>
-  <component name="ProjectId" id="2dPRtmIN1yp6WJVIRcYnV5gJXOA" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IdeaProjects/Fitness-First-Merged&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;D:/IdeaProjects/Fitness-First-Merged/backend/node_modules/jest&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
-  <component name="RunManager">
-    <configuration name="Tests in tests/" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/backend/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/backend" />
-      <envs />
-      <scope-kind value="DIRECTORY" />
-      <test-directory value="$PROJECT_DIR$/backend/tests" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Jest.Tests in tests/" />
-      </list>
-    </recent_temporary>
+</component>
+
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Metropolia\Period3\Project\Fitness_First_Merged\frontend\public" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -107,8 +55,12 @@
       <workItem from="1709907953352" duration="24000" />
       <workItem from="1710070658106" duration="241000" />
       <workItem from="1710102634188" duration="3016000" />
-      <workItem from="1710404725080" duration="936000" />
-      <workItem from="1710419484174" duration="405000" />
+
+      <workItem from="1710495926011" duration="175000" />
+      <workItem from="1710496249157" duration="2412000" />
+      <workItem from="1710839019327" duration="53000" />
+      <workItem from="1712048953319" duration="7928000" />
+
     </task>
     <task id="LOCAL-00001" summary="Dockerfile Added">
       <option name="closed" value="true" />
