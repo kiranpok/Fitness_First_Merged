@@ -6,27 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca62b03c-d0b3-441c-8a61-c58a1f694c65" name="Changes" comment="Dockerfile Added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/userModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/userRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/fitness1.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/fitness1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ActivityForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ActivityForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ActivityList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ActivityList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ActivityStats.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ActivityStats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/GoalDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GoalDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/GoalForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GoalForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UserProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SignIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/authService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +69,7 @@
       <workItem from="1710495926011" duration="175000" />
       <workItem from="1710496249157" duration="2412000" />
       <workItem from="1710839019327" duration="53000" />
-      <workItem from="1712048953319" duration="6995000" />
+      <workItem from="1712048953319" duration="7928000" />
     </task>
     <task id="LOCAL-00001" summary="Dockerfile Added">
       <option name="closed" value="true" />
