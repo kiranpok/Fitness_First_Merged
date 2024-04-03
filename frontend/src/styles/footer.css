@@ -1,6 +1,6 @@
 /* footer.css */
 
-body {
+/*body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -13,15 +13,16 @@ body {
   padding: 20px;
   background-color: #f8f9fa;
   height: 300px; /* Set the height of the footer */
-  margin-top: 50px; /* Push the footer to the bottom */
-}
+  /*margin-top: 50px; /* Push the footer to the bottom */
+/*}
 
 .social-media {
   display: flex;
+  align-items: center;
 }
 
 .social-media a {
-  margin-right: 20px;
+  margin: 0 10px
 }
 
 .social-media img {
@@ -32,6 +33,7 @@ body {
 .copyright {
   font-size: 14px;
   color: #333;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -45,5 +47,74 @@ body {
 
   .social-media a {
     margin-right: 10px;
+  }
+}*/
+/* Footer styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 16px;
+  background-color: #ececec;
+  color: #000000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+
+}
+
+.facebook-icon {
+  margin-right: 200px;
+  width: 30px;
+  height: 30px;
+
+}
+
+.instagram-icon {
+  text-align: center;
+  position: fixed;
+  margin-top: 40px;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+}
+
+.share-icon {
+  margin-left: 1200px;
+  width: 30px;
+  height: 30px;
+
+
+}
+
+.copyright {
+
+  text-align: center;
+  position: fixed;
+  margin-top: 40px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-media {
+    margin-top: 20px;
   }
 }

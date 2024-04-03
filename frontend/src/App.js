@@ -16,6 +16,9 @@ import Header from "./components/Header";
 import UserProfile from "./components/UserProfile";
 import { AuthProvider } from "./hooks/AuthContext"; // Import the AuthProvider
 import Dashboard from "./pages/Dashboard";
+import i18n from "./i18n";
+import { I18nextProvider } from "react-i18next";
+
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
@@ -42,6 +45,7 @@ function App() {
   };
 
   return (
+      <I18nextProvider i18n={i18n}>
     <div className="App">
       <BrowserRouter>
         {/* Wrap the components with AuthProvider */}
@@ -93,6 +97,7 @@ function App() {
         </AuthProvider>
       </BrowserRouter>
     </div>
+      </I18nextProvider>
   );
 }
 

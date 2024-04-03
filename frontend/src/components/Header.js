@@ -4,8 +4,11 @@ import { useAuth } from "../hooks/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "../styles/header.css";
+import LanguageSwitch from "./LanguageSwitch";
+import {useTranslation} from "react-i18next";
 
 const Header = () => {
+  const { t } = useTranslation();
   const { isAuthenticated, user, signoutUser } = useAuth();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,10 +31,10 @@ const Header = () => {
       </button>
       <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
         <Link to="/dashboard" onClick={toggleMenu}>
-          Goals
+          {t("header.goals")}
         </Link>
         <Link to="/activityForm" onClick={toggleMenu}>
-          Activities
+          {t("header.activities")}
         </Link>
         <div
           onClick={toggleDropdown}
@@ -49,10 +52,10 @@ const Header = () => {
                 style={{ display: "block" }}
                 onClick={toggleMenu}
               >
-                Profile
+                {t("header.profile")}
               </Link>
               <button onClick={signoutUser} style={{ display: "block" }}>
-                Sign out
+                {t("header.logout")}
               </button>
             </div>
           )}
@@ -64,13 +67,17 @@ const Header = () => {
         ) : (
           <>
             <Link to="/signin" onClick={toggleMenu}>
-              Login
+              {t("header.login")}
             </Link>
             <Link to="/signup" onClick={toggleMenu}>
-              Signup
+              {t("header.signup")}
             </Link>
           </>
         )}
+        <>
+          {t("header.language")}
+          <LanguageSwitch />
+        </>
       </nav>
     </div>
   );

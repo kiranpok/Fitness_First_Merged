@@ -5,6 +5,7 @@ import EditActivityForm from "./EditActivityForm";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import {useTranslation} from "react-i18next";
 
 const ActivityList = () => {
   const [activities, setActivities] = useState([]);
@@ -12,6 +13,7 @@ const ActivityList = () => {
   const [showDeletePrompt, setShowDeletePrompt] = useState(false);
   const [deleteActivityId, setDeleteActivityId] = useState(null);
   const navigate = useNavigate();
+  const {t }= useTranslation()
 
   useEffect(() => {
     fetchActivities();
@@ -59,51 +61,53 @@ const ActivityList = () => {
   };
 
   return (
-    <div className="activity-list-container">
-      {activities.map((activity) => (
-        <div key={activity._id} className="activity-item">
-          <div className="left-side">
-            <div className="details-line">
-              <strong>{activity.activityName}</strong>
-            </div>
-            <div className="details-line"><strong>Activity Type:</strong>{activity.activityType} </div>
-            <div className="details-line"><strong>Km:</strong>{activity.distance}</div>
-            <div className="details-line"><strong>Duration:</strong> {activity.duration}</div>
-          </div>
-          <div className="right-side">
-            <div className="details-line profile-info">
-              {activity.user}<strong>Date: </strong>{new Date(activity.date).toLocaleDateString('en-GB')} | {activity.startTime}
-            </div>
-            <div className="details-line"> <strong>Note: </strong>{activity.notes}</div>
-          </div>
-          <div className="buttons">
-            <button onClick={() => handleEdit(activity._id)}>
-              <FontAwesomeIcon icon={faEdit} /> 
-            </button>
-            <button onClick={() => handleDelete(activity._id)}>
-              <FontAwesomeIcon icon={faTrashAlt} /> 
-            </button>
-          </div>
+      <div className="activity-list-container">
+        {activities.map((activity) => (
+            <div key={activity._id} className="activity-item">
+              <div className="left-side">
+                <div className="details-line">
+                  <strong>{t('activity_list.name')}</strong>{activity.activityName}
+                </div>
+                <div className="details-line"><strong>{t('activity_list.activity_type')}</strong>{activity.activityType} </div>
+                <div className="details-line"><strong>{t('activity_list.distance')}</strong>{activity.distance}</div>
+                <div className="details-line"><strong>{t('activity_list.duration')}</strong> {activity.duration}</div>
+              </div>
+              <div className="right-side">
+                <div className="details-line profile-info">
+                  {activity.user}<strong>{t('activity_list.date')} </strong>{new Date(activity.date).toLocaleDateString('en-GB')} | {activity.startTime}
+                </div>
+                <div className="details-line"> <strong>{t('activity_list.notes')} </strong>{activity.notes}</div>
+              </div>
+              <div className="buttons">
+                <button onClick={() => handleEdit(activity._id)}>
+                  <FontAwesomeIcon icon={faEdit} />
+                </button>
+                <button onClick={() => handleDelete(activity._id)}>
+                  <FontAwesomeIcon icon={faTrashAlt} />
+                </button>
+              </div>
 
-          {editActivityId && (
-            <EditActivityForm
-              activityId={editActivityId}
-              onCancel={() => setEditActivityId(null)}
-            />
-          )}
-          {showDeletePrompt && (
-            <div className="delete-prompt">
-              <p>Are you sure you want to delete this activity?</p>
-              <button onClick={handleDeleteConfirm}>Ok</button>
-              <button onClick={handleDeleteCancel}>Cancel</button>
+              {editActivityId && (
+                  <EditActivityForm
+                      activityId={editActivityId}
+                      onCancel={() => setEditActivityId(null)}
+                  />
+              )}
+              {showDeletePrompt && (
+                  <div className="delete-prompt">
+                    <p>{t('activity_list.para')}</p>
+                    <button onClick={handleDeleteConfirm}>{t('activity_list.ok')}</button>
+                    <button onClick={handleDeleteCancel}>{t('activity_list.cancel')}</button>
+                  </div>
+              )}
             </div>
-          )}
-        </div>
-      ))}
-      <Link to="/activityStats">Activity Stats</Link>
-      <Footer />
-    </div>
+        ))}
+        <Link to="/activityStats">Activity Stats</Link>
+        <Footer />
+      </div>
   );
 };
+
+
 
 export default ActivityList;

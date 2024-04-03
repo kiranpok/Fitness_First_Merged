@@ -4,8 +4,10 @@ import UserProfileEditForm from "./UserProfileEditForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCog } from "@fortawesome/free-solid-svg-icons";
 import "../styles/profile.css";
+import {useTranslation} from "react-i18next";
 
 const UserProfile = () => {
+  const {t} = useTranslation();
   const [userProfile, setUserProfile] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -51,48 +53,51 @@ const UserProfile = () => {
       console.error("Error updating profile:", error);
     }
   };
+
   return (
       <div className="user-profile">
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error}</p>}
         {updateSuccess && <p>Profile updated successfully!</p>}
         {userProfile && (
-          <div>
-            <h2>User Profile</h2>
-            <img
-              src={
-                (updatedProfileData && updatedProfileData.avatar) ||
-                userProfile.avatar ||
-                "https://via.placeholder.com/100?text=Profile+Avatar"
-              }
-              alt="Profile Avatar"
-              style={{ borderRadius: "50%" }} // This will make the image round
-            />
-            <p>
-              {(updatedProfileData && updatedProfileData.name) || userProfile.name}, 
-              {(updatedProfileData && updatedProfileData.email) || userProfile.email}
-            </p>
-            <p>Gender: {(updatedProfileData && updatedProfileData.gender) || userProfile.gender}</p>
-            <p>Birthdate: {(updatedProfileData && updatedProfileData.birthdate) || userProfile.birthdate}</p>
-            <p>Height: {(updatedProfileData && updatedProfileData.height) || userProfile.height}</p>
-            <p>Weight: {(updatedProfileData && updatedProfileData.weight) || userProfile.weight}</p>
-            {isEditing ? (
-              <UserProfileEditForm
-                userProfileData={userProfile}
-                handleProfileUpdate={handleProfileUpdate}
-                handleCancel={() => setIsEditing(false)}
+            <div>
+              <h2>{t('profile.title')}</h2>
+              <img
+                  src={
+                      (updatedProfileData && updatedProfileData.avatar) ||
+                      userProfile.avatar ||
+                      "https://via.placeholder.com/100?text=Profile+Avatar"
+                  }
+                  alt="Profile Avatar"
+                  style={{ borderRadius: "50%" }} // This will make the image round
               />
-            ) : (
-              <button
-                className="settings-button"
-                onClick={() => setIsEditing(true)}
-              >
-                <FontAwesomeIcon icon={faCog} /> Update Profile
-              </button>
-            )}
-          </div>
+              <p>
+                {(updatedProfileData && updatedProfileData.name) || userProfile.name},
+                {(updatedProfileData && updatedProfileData.email) || userProfile.email}
+              </p>
+              <p>{t('profile.gender')} {(updatedProfileData && updatedProfileData.gender) || userProfile.gender}</p>
+              <p>{t('profile.birth_date')} {(updatedProfileData && updatedProfileData.birthdate) || userProfile.birthdate}</p>
+              <p>{t('profile.height')} {(updatedProfileData && updatedProfileData.height) || userProfile.height}</p>
+              <p>{t('profile.weight')} {(updatedProfileData && updatedProfileData.weight) || userProfile.weight}</p>
+              {isEditing ? (
+                  <UserProfileEditForm
+                      userProfileData={userProfile}
+                      handleProfileUpdate={handleProfileUpdate}
+                      handleCancel={() => setIsEditing(false)}
+                  />
+              ) : (
+                  <button
+                      className="settings-button"
+                      onClick={() => setIsEditing(true)}
+                  >
+                    <FontAwesomeIcon icon={faCog} /> {t('profile.button')}
+                  </button>
+              )}
+            </div>
         )}
         {!userProfile && <p>User profile data not available</p>}
       </div>
   );};
+
+
 export default UserProfile;

@@ -1,0 +1,107 @@
+{
+  "welcome": "Transform Your Fitness Journey",
+  "description": " Get Your Body Fit",
+  "join_us": "JOIN US",
+  "header": {
+    "goals": "Goals",
+    "activities": "Activities",
+    "profile": " Profile",
+    "logout": "Logout",
+    "login": "Login",
+    "signup": "Signup",
+    "language": "Language"
+  },
+  "login": {
+    "title": "Sign In",
+    "email": "Email Address",
+    "password": "Password",
+    "login": "Login",
+    "signup": "Sign Up",
+    "account": "Don't have an account?",
+    "forgot_password": "Forgot Password?"
+  },
+  "signup": {
+    "title": "Sign Up",
+    "name": "Name",
+    "email": "Email Address",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "signup": "Sign Up",
+    "login": "Login",
+    "account": "Already have an account?"
+  },
+  "goal_form": {
+    "button_name": "Create Goal",
+    "title": "Add a New Goal",
+    "goal_name": "Goal Name:",
+    "distance": "Distance (km):",
+    "duration": "Duration (h):",
+    "date": "Date:",
+    "save_goal": "Save Goal",
+    "cancel": "Cancel"
+  },
+  "goal_details": {
+    "name": "Goal Name:",
+    "duration": "Duration (h):",
+    "distance": "Distance (km):",
+    "date": "Date:"
+  },
+  "goal_edit": {
+    "name": "Goal Name:",
+    "distance": "Distance (km):",
+    "duration": "Duration (h):",
+    "date": "Date:",
+    "save_goal": "Save Goal",
+    "cancel": "Cancel"
+  },
+  "activity_form": {
+    "title": "Log Manually",
+    "name": "Activity Name:",
+    "start_time":"Start Time:",
+    "date": "Date:",
+    "activity_type": "Activity Type:",
+    "running": "Running",
+    "walk": "Walking",
+    "bike": "Biking",
+    "distance": "Distance (Km):",
+    "duration": "Duration (hh:mm:ss):",
+    "pace": "Pace (km/hr):",
+    "notes": "Notes:",
+    "save": "Save "
+  },
+  "activity_list": {
+    "name": "Activity Name:",
+    "activity_type": "Activity Type:",
+    "distance": "Distance (Km):",
+    "duration": "Duration (h):",
+    "date": "Date:",
+    "notes": "Notes",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "para": "Are you sure you want to delete this activity?"
+
+  },
+
+  "profile": {
+    "title": "User Profile",
+    "name": "Name: ",
+    "gender": "Gender: ",
+    "birth_date": "Birthdate: ",
+    "height": "Height: ",
+    "weight": "Weight: ",
+    "button": "Update Profile"
+  },
+  "update_profile": {
+    "title": "Update Your Profile",
+    "name": "Name",
+    "gender": "Gender:",
+    "birth_day": "Date of Birth:",
+    "height": "Height (centimeters):",
+    "weight": "Weight (kilograms):",
+    "button": "Update",
+    "cancel": "Cancel"
+  }
+
+}
+
+

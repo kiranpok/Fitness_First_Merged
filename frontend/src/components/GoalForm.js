@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useGoalsContext } from '../hooks/useGoalsContext';
 import '../styles/goalform.css';
+import {useTranslation} from "react-i18next";
 
 const GoalForm = () => {
     const { dispatch } = useGoalsContext();
@@ -11,6 +12,7 @@ const GoalForm = () => {
     const [error, setError] = useState(null);
     const [emptyFields, setEmptyFields] = useState([]);
     const [isFormVisible, setFormVisible] = useState(false); // Track form visibility state
+    const {t} = useTranslation();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -64,11 +66,11 @@ const GoalForm = () => {
 
     return (
         <>
-            <button onClick={() => setFormVisible(true)}>Create Goal</button>
+            <button onClick={() => setFormVisible(true)}>{t("goal_form.button_name")}</button>
             {isFormVisible && (
                 <form className="goal-form" onSubmit={handleSubmit}>
-                    <h3>Add a New Goal</h3>
-                    <label>Goal Name</label>
+                    <h3>{t("goal_form.title")}</h3>
+                    <label>{t("goal_form.goal_name")}</label>
                     <input
                         type="text"
                         placeholder="running"
@@ -76,7 +78,7 @@ const GoalForm = () => {
                         value={name}
                         className={emptyFields.includes('name') ? 'error' : ''}
                     />
-                    <label>Distance (km): </label>
+                    <label>{t("goal_form.distance")} </label>
                     <input
                         type="number"
                         placeholder="0"
@@ -84,7 +86,7 @@ const GoalForm = () => {
                         value={distance}
                         className={emptyFields.includes('distance') ? 'error' : ''}
                     />
-                    <label>Duration (h): </label>
+                    <label>{t("goal_form.duration")}</label>
                     <input
                         type="number"
                         placeholder="0"
@@ -92,7 +94,7 @@ const GoalForm = () => {
                         value={duration}
                         className={emptyFields.includes('duration') ? 'error' : ''}
                     />
-                    <label>Date: </label>
+                    <label>{t("goal_form.date")}</label>
                     <input
                         type="date"
                         min={new Date().toISOString().split('T')[0]}
@@ -100,8 +102,8 @@ const GoalForm = () => {
                         value={date}
                         className={emptyFields.includes('date') ? 'error' : ''}
                     />
-                    <button type="submit">Save Goal</button>
-                    <button type="button" onClick={handleCancel}>Cancel</button>
+                    <button type="submit">{t("goal_form.save_goal")}</button>
+                    <button type="button" onClick={handleCancel}>{t("goal_form.cancel")}</button>
                     {error && <p className="error">{error}</p>}
                 </form>
             )}

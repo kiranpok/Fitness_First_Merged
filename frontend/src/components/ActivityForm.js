@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/activityform.css";
 import Footer from "./Footer";
+import { useTranslation } from 'react-i18next';
 
 const ActivityForm = () => {
+  const { t } = useTranslation();
   const [activityName, setActivityName] = useState("");
   const [startTime, setStartTime] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
@@ -71,10 +73,10 @@ const ActivityForm = () => {
   return (
     <div>
       <form className="activity-form-container">
-        <h3>Log Manually</h3>
+        <h3>{t("activity_form.title")}</h3>
 
         <div className="activity-line">
-          <label>Activity Name:</label>
+          <label>{t("activity_form.name")}</label>
           <input
             type="text"
             value={activityName}
@@ -83,14 +85,14 @@ const ActivityForm = () => {
         </div>
 
         <div className="activity-line">
-          <label>Start Time:</label>
+          <label>{t("activity_form.start_time")}</label>
           <input
             type="time"
             value={startTime}
             onChange={(e) => setStartTime(e.target.value)}
           />
 
-          <label>Date:</label>
+          <label>{t("activity_from.date")}</label>
           <input
             type="date"
             value={selectedDate}
@@ -99,7 +101,7 @@ const ActivityForm = () => {
         </div>
 
         <div className="activity-line">
-          <label>Activity Type:</label>
+          <label>{t("activity_form.activity_type")}</label>
           <select
             value={selectedActivityType}
             onChange={(e) => setSelectedActivityType(e.target.value)}
@@ -111,7 +113,7 @@ const ActivityForm = () => {
         </div>
 
         <div className="activity-line">
-          <label>Duration (hh:mm:ss):</label>
+          <label>{t("activity_form.duration")}</label>
           <input
             type="text"
             value={duration}
@@ -120,7 +122,7 @@ const ActivityForm = () => {
         </div>
 
         <div className="activity-line">
-          <label>Distance (km):</label>
+          <label>{t("activity_form.distance")}</label>
           <input
             type="text"
             value={distance}
@@ -129,7 +131,7 @@ const ActivityForm = () => {
         </div>
 
         <div className="activity-line">
-          <label>Pace (km/hr):</label>
+          <label>{t("activity_form.pace")}</label>
           <input
             type="text"
             value={pace}
@@ -138,7 +140,7 @@ const ActivityForm = () => {
         </div>
 
         <div className="activity-line">
-          <label>Notes:</label>
+          <label>{t("activity_form.notes")}</label>
           <textarea
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
@@ -146,7 +148,7 @@ const ActivityForm = () => {
         </div>
 
         <button className="activity-button" type="button" onClick={handleSave}>
-          Save
+          {t("activity_form.save")}
         </button>
       </form>
       <Footer />

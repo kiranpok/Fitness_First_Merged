@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { updateUserProfile } from "../services/authService";
 import "../styles/userProfileEditForm.css";
+import { useTranslation} from "react-i18next";
 
 const UserProfileEditForm = ({ userProfileData, handleProfileUpdate, handleCancel }) => {
   const [showSuccessMsg, setShowSuccessMsg] = useState(false);
+  const {t} = useTranslation();
   const [user, setUser] = useState({
     name: "",
     gender: "",
@@ -46,9 +48,10 @@ const UserProfileEditForm = ({ userProfileData, handleProfileUpdate, handleCance
   return (
     <div className="user-profile-edit-form">
       {showSuccessMsg && (
-        <p className="success-msg">Profile updated successfully!</p>
+          <p className="success-msg">Profile updated successfully!</p>
+          //<p className="success-msg">{t("update-profile.title")}</p>
       )}
-      <h2 className="user-profile-edit-title">Update Your Profile</h2>
+        <h2 className="user-profile-edit-title">{t("update_profile.title")}</h2>
       {/* Input fields for editing profile data */}
       <input
         type="file"
@@ -87,10 +90,10 @@ const UserProfileEditForm = ({ userProfileData, handleProfileUpdate, handleCance
       />
       {/* Save button */}
       <button onClick={handleSave} className="save-button">
-        Update
+          {t("update-profile.button")}
       </button>
       <button onClick={handleCancel} className="cancel-button">
-        Cancel
+          {t("update-profile.cancel")}
       </button>
     </div>
   );

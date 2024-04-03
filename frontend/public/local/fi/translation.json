@@ -1,0 +1,109 @@
+{
+
+  "welcome": "Muuta kuntomatkasi",
+  "description": " Saada kehosi sopimaan",
+  "join_us": "Aloita nyt",
+  "header": {
+    "goals": "Tavoitteet",
+    "activities": "Aktiviteetit",
+    "profile": " Profiili",
+    "logout": "Kirjaudu ulos",
+    "login": "Kirjaudu sisään",
+    "signup": "Rekisteröidy",
+    "language": "Kieli"
+  },
+  "login": {
+    "title": "Kirjaudu sisään",
+    "email": "Sähköposti",
+    "password": "Salasana",
+    "login": "Kirjaudu sisään",
+    "signup": "Rekisteröidy",
+    "account": "Ei tiliä? Luo tili tästä",
+    "forgot_password": "Unohditko salasanasi?"
+  },
+  "signup": {
+    "title": "Rekisteröidy",
+    "name": "Nimi",
+    "email": "Sähköposti",
+    "password": "Salasana",
+    "confirm_password": "Vahvista salasana",
+    "signup": "Rekisteröidy",
+    "login": "Kirjaudu sisään",
+    "account": "Onko sinulla jo tili? "
+  },
+  "goal_form": {
+    "button_name": "Luo tavoite",
+    "title": "Luo uusi tavoite",
+    "goal_name": "Tavoitteen nimi:",
+    "distance": "Matka (km):",
+    "duration": "Kesto (min):",
+    "date": "Päivämäärä:",
+    "save_goal": "Tallenna tavoite",
+    "cancel": "Peruuta"
+  },
+  "goal_details": {
+    "name": "Nimi:",
+    "duration": "Kesto (min):",
+    "distance": "Matka (km):",
+    "date": "Päivämäärä:"
+  },
+  "goal_edit": {
+    "name": "Tavoitteen nimi:",
+    "distance": "Matka (km):",
+    "duration": "Kesto (min):",
+    "date": "Päivämäärä:",
+    "save_goal": "Tallenna",
+    "cancel": "Peruuta"
+  },
+  "activity_form": {
+    "title": "Kirjaudu manuaalisesti",
+    "name": "Aktiviteetin nimi:",
+    "start_time":"Aloitusaika:",
+    "date": "Päivämäärä:",
+    "activity_type": "Aktiviteetin tyyppi:",
+    "running": "Juoksu",
+    "walk": "Kävely",
+    "bike": "Pyöräily",
+    "distance": "Matka (hh:mm:ss):",
+    "duration": "Kesto (h):",
+    "pace": "Vauhti (km/min):",
+    "notes": "Muistiinpanot:",
+    "save": "Tallenna"
+  },
+  "activity_list": {
+    "name": "Aktiviteetin nimi:",
+    "activity_type": "Aktiviteetin tyyppi:",
+    "distance": "Matka (km):",
+    "duration": "Kesto (min):",
+    "date": "Päivämäärä:",
+    "notes": "Muistiinpanot:",
+    "ok": "OKei",
+    "cancel": "Peruuta",
+    "para": "Oletko varma, että haluat poistaa tämän aktivitin?"
+
+  },
+  "profile": {
+    "title": "Käyttäjäprofiili",
+    "name": "Nimi",
+    "gender": "Sukupuoli:",
+    "birth_day": "Syntymäpäivä:",
+    "height": "Pituus:",
+    "weight": "Paino:",
+    "button": "Päivitä profiili"
+  },
+  "update-profile": {
+    "title": "Päivitä profiilisi",
+    "name": "Nimi",
+    "gender": "Sukupuoli:",
+    "birth_day": "Syntymäpäivä:",
+    "height": "Pituus (senttimetri):",
+    "weight": "Paino (kilogram):",
+    "button": "Päivitä",
+    "cancel": "Peruuta"
+  }
+
+
+
+
+
+}

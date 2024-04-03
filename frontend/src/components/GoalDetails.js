@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useGoalsContext } from '../hooks/useGoalsContext';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import '../styles/goaldetails.css';
+import {useTranslation} from "react-i18next";
 
 const GoalDetails = ({ goal, onDelete }) => {
     const { dispatch } = useGoalsContext();
@@ -12,6 +13,7 @@ const GoalDetails = ({ goal, onDelete }) => {
     const [date, setDate] = useState(goal.date);
     const [error, setError] = useState(null);
     const [emptyFields, setEmptyFields] = useState([]);
+    const {t} = useTranslation();
 
     const handleSave = async () => {
         const updatedGoal = {
@@ -59,28 +61,28 @@ const GoalDetails = ({ goal, onDelete }) => {
             {isEditing ? (
                 <>
                     <h4>{goal.title}</h4>
-                    <label>Goal Name</label>
+                    <label>{t("goal_details.name")}</label>
                     <input
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         className={emptyFields.includes('name') ? 'error' : ''}
                     />
-                    <label>Distance (km): </label>
+                    <label>{t("goal_details.distance")}</label>
                     <input
                         type="number"
                         value={distance}
                         onChange={(e) => setDistance(e.target.value)}
                         className={emptyFields.includes('distance') ? 'error' : ''}
                     />
-                    <label>Duration (h): </label>
+                    <label>{t("goal_details.duration")}</label>
                     <input
                         type="number"
                         value={duration}
                         onChange={(e) => setDuration(e.target.value)}
                         className={emptyFields.includes('duration') ? 'error' : ''}
                     />
-                    <label>Date: </label>
+                    <label>{t("goal_details.date")}</label>
                     <input
                         type="date"
                         value={date}
