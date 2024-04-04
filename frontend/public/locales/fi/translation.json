@@ -90,7 +90,26 @@
      "height": "Pituus: ",
      "weight": "Paino: ",
      "button": "Päivitä Profiili"
-   }
+   },
+   "update_profile": {
+    "para": "Profiilin päivitys onnistui!",
+    "title": "Käyttäjä Profiili",
+    "upload_image": "Lataa kuva",
+    "name": "Nimi: ",
+    "gender": "Sukupuoli: ",
+    "birth_date": "Syntymäaika: ",
+    "height": "Pituus: ",
+    "weight": "Paino: ",
+    "button": "Päivitä Profiili",
+    "cancel": "Peruuta",
+    "update": "Päivitä"
+  },
+  "activity_stats": {
+    "title": "Aktiivisuustilastot viimeisten 7 päivän ajalta",
+    "distance": "Matka (km):",
+    "duration": "Kesto (min):",
+    "activities": "Aktiviteetit: "
+  }
 
 
   

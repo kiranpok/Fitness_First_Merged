@@ -2,9 +2,12 @@ import React from "react";
 import { useRef, useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
 import Chart from "chart.js/auto";
+import { useTranslation } from "react-i18next";
 
 
 const ActivityStats = () => {
+    const { t } = useTranslation();
+
     const [activityData, setActivityData] = useState([]);
 
     useEffect(() => {
@@ -106,7 +109,7 @@ const ActivityStats = () => {
 
     return (
         <div>
-            <h2>Activity Stats for the Last 7 Days</h2>
+            <h2>{t('activity_stats.title')}</h2>
             <div>
                 <Bar data={distanceData} options={options} id="distanceChart" />
             </div>

@@ -73,7 +73,7 @@ const GoalForm = () => {
                     <label>{t('goal_form.goal_name')}</label>
                     <input
                         type="text"
-                        placeholder="Running"
+                        placeholder=""
                         onChange={(e) => setName(e.target.value)}
                         value={name}
                         className={emptyFields.includes('name') ? 'error' : ''}
@@ -81,7 +81,7 @@ const GoalForm = () => {
                     <label>{t('goal_form.distance')} </label>
                     <input
                         type="number"
-                        placeholder="0"
+                        placeholder=""
                         onChange={(e) => setDistance(e.target.value)}
                         value={distance}
                         className={emptyFields.includes('distance') ? 'error' : ''}
@@ -89,7 +89,7 @@ const GoalForm = () => {
                     <label>{t('goal_form.duration')} </label>
                     <input
                         type="number"
-                        placeholder="0"
+                        placeholder=""
                         onChange={(e) => setDuration(e.target.value)}
                         value={duration}
                         className={emptyFields.includes('duration') ? 'error' : ''}

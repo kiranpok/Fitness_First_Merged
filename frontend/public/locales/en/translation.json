@@ -81,14 +81,34 @@
         "para": "Are you sure you want to delete this activity?"
       
       },
-  "profile": {
-    "title": "User Profile",
-    "name": "Name: ",
-    "gender": "Gender: ",
-    "birth_date": "Birthdate: ",
-    "height": "Height: ",
-    "weight": "Weight: ",
-    "button": "Update Profile"
-  }
+      "profile": {
+        "title": "User Profile",
+        "name": "Name: ",
+        "gender": "Gender: ",
+        "birth_date": "Birthdate: ",
+        "height": "Height: ",
+        "weight": "Weight: ",
+        "button": "Update Profile"
+      },
+      "update_profile": {
+        "para": "Profile updated successfully!",
+        "title": "Update Your Profile",
+        "upload_image": "Choose file",
+        "name": "Name: ",
+        "gender": "Gender: ",
+        "birth_date": "Birthdate: ",
+        "height": "Height: ",
+        "weight": "Weight: ",
+        "button": "Update Profile",
+        "cancel": "Cancel",
+        "update": "Update"
+      },
+      "activity_stats": {
+        "title": "Activity Stats for the Last 7 Days",
+        "distance": "Distance (km): ",
+        "duration": "Duration (hours): ",
+        "activities": "Total Activities: "
+      }
+  
 
 }

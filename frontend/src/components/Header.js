@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <Link to="/home" className="logo">Fitness-First</Link>
+      <Link to="/" className="logo">Fitness-First</Link>
       <button className="hamburger-menu" onClick={toggleMenu}>
         <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
       </button>
