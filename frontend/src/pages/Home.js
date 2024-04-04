@@ -25,7 +25,9 @@ const Home = () => {
             {t('join_us')}
           </button>
         </div>
-        <div className="fitness-pic"></div>
+        <div>
+          <img src="/fitness2.png" alt="fitness" className="fitness-pic" />
+      </div>
       </div>
     
     </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {Link, useNavigate } from "react-router-dom";
-import "../styles/Signup.css";
+import "../styles/SignUp.css";
 import Footer from "../components/Footer";
 import { useTranslation } from 'react-i18next';
 
