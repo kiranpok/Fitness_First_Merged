@@ -23,11 +23,18 @@ const UserProfileEditForm = ({ userProfileData, handleProfileUpdate, handleCance
   const handleImageUpload = (e) => {
     setUser({ ...user, avatar: e.target.files[0] });
   };
+
+    const handleInputChange = (e, field) => {
+        setUser((prevUser) => ({
+            ...prevUser,
+            [field]: e.target.value,
+        }));
+    };
   const handleSave = async () => {
     try {
       // Call updateUserProfile function to update the profile data
       const updatedProfile = await updateUserProfile(user);
-      console.log("Profile updated successfully", updatedProfile);
+      // console.log("Profile updated successfully", updatedProfile);
       setUser(updatedProfile); // Update the local state with the updated profile
       setShowSuccessMsg(true);
       handleProfileUpdate(updatedProfile); // Update the user profile data in the parent component
@@ -41,59 +48,65 @@ const UserProfileEditForm = ({ userProfileData, handleProfileUpdate, handleCance
       console.error("Error updating profile:", error);
     }
   };
-  
 
-  return (
-    <div className="user-profile-edit-form">
-      {showSuccessMsg && (
-        <p className="success-msg">Profile updated successfully!</p>
-      )}
-      <h2 className="user-profile-edit-title">Update Your Profile</h2>
-      {/* Input fields for editing profile data */}
-      <input
-        type="file"
-        onChange={handleImageUpload}
-        className="input-field"
-      />
-      <input
-        type="text"
-        onChange={(e) => setUser({ ...user, name: e.target.value })}
-        placeholder="Name"
-        className="input-field"
-      />
-      <input
-        type="text"
-        onChange={(e) => setUser({ ...user, gender: e.target.value })}
-        placeholder="Gender"
-        className="input-field"
-      />
-      <input
-        type="text"
-        onChange={(e) => setUser({ ...user, birthdate: e.target.value })}
-        placeholder="Birthdate"
-        className="input-field"
-      />
-      <input
-        type="text"
-        onChange={(e) => setUser({ ...user, height: e.target.value })}
-        placeholder="Height (cm)"
-        className="input-field"
-      />
-      <input
-        type="text"
-        onChange={(e) => setUser({ ...user, weight: e.target.value })}
-        placeholder="Weight (kg)"
-        className="input-field"
-      />
-      {/* Save button */}
-      <button onClick={handleSave} className="save-button">
-        Update
-      </button>
-      <button onClick={handleCancel} className="cancel-button">
-        Cancel
-      </button>
-    </div>
-  );
+
+    return (
+        <div className="user-profile-edit-form">
+            {showSuccessMsg && (
+                <p className="success-msg">Profile updated successfully!</p>
+            )}
+            <h2 className="user-profile-edit-title">Update Your Profile</h2>
+            {/* Input fields for editing profile data */}
+            <input
+                type="file"
+                onChange={handleImageUpload}
+                className="input-field"
+            />
+            <input
+                type="text"
+                value={user.name}
+                onChange={(e) => handleInputChange(e, "name")}
+                placeholder="Name"
+                className="input-field"
+            />
+            <input
+                type="text"
+                value={user.gender}
+                onChange={(e) => handleInputChange(e, "gender")}
+                placeholder="Gender"
+                className="input-field"
+            />
+            <input
+                type="date"
+                value={user.birthdate ? new Date(user.birthdate).toISOString().split('T')[0] : ""}
+                onChange={(e) => handleInputChange(e, "birthdate")}
+                placeholder="Birthdate"
+                className="input-field"
+            />
+            <input
+                type="number"
+                value={user.height}
+                onChange={(e) => handleInputChange(e, "height")}
+                placeholder="Height (cm)"
+                className="input-field"
+            />
+            <input
+                type="number"
+                value={user.weight}
+                onChange={(e) => handleInputChange(e, "weight")}
+                placeholder="Weight (kg)"
+                className="input-field"
+            />
+            {/* Save button */}
+            <button onClick={handleSave} className="save-button">
+                Update
+            </button>
+            <button onClick={handleCancel} className="cancel-button">
+                Cancel
+            </button>
+        </div>
+    );
 };
+
 
 export default UserProfileEditForm;
