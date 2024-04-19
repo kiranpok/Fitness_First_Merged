@@ -109,10 +109,52 @@
     "distance": "Matka (km):",
     "duration": "Kesto (min):",
     "activities": "Aktiviteetit: "
+  },
+  "error": {
+    "required_fields": "Ole hyvä ja täytä kaikki vaaditut kentät",
+    "email_exists": "Sähköpostiosoite on jo rekisteröity",
+    "email_not_found": "Sähköpostia ei löytynyt",
+    "invalid_password": "Virheellinen salasana",
+    "server": "Palvelinvirhe",
+    "password_reset_failed": "Salasanan nollauspyyntö epäonnistui",
+    "user_not_found": "Käyttäjää ei löytynyt",
+    "signout_failed": "Uloskirjautumispyyntö epäonnistui",
+
+    
+    "no_goal": "Ei sellaista tavoitetta",
+    "goal_not_found": "Tavoitetta ei löytynyt",
+    "internal_server_error": "Sisäinen palvelinvirhe"
+  },
+  "success": {
+    "registered": "Rekisteröityminen onnistui",
+    "logged_in": "Kirjautuminen onnistui",
+    "password_reset_request": "Salasanan nollauspyyntö onnistui",
+    "password_reset_successful": "Salasanan nollaus onnistui",
+    "signout_successful": "Uloskirjautuminen onnistui",
+
+    "goal_updated": "Tavoite päivitetty onnistuneesti",
+    "goal_deleted": "Tavoite poistettu onnistuneesti"
+  },
+
+ 
+    "name": "Nimi",
+    "email": "Sähköposti",
+    "password": "Salasana",
+    "gender": "Sukupuoli",
+    "birthdate": "Syntymäaika",
+    "height": "Pituus",
+    "weight": "Paino",
+
+    "distance": "Matka",
+    "duration": "Kesto",
+    "date": "Päivämäärä"
   }
+
+
+
 
 
   
 
-    }
+    
   

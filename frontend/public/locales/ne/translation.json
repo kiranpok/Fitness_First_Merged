@@ -107,5 +107,44 @@
     "distance": "दुरी (किमी):",
     "duration": "अवधि (घण्टा):",
     "activities": "कृयाकलापहरू"
+  },
+
+
+  "error": {
+    "required_fields": "कृपया सबै आवश्यक क्षेत्रहरू प्रदान गर्नुहोस्",
+    "email_exists": "ईमेल पहिल्यै अवस्थित छ",
+    "email_not_found": "ईमेल फेला परेन",
+    "invalid_password": "अमान्य पासवर्ड",
+    "server": "सर्भर त्रुटि",
+    "password_reset_failed": "पासवर्ड रिसेट अनुरोध असफल भयो",
+    "user_not_found": "प्रयोगकर्ता फेला परेन",
+    "signout_failed": "साइनआउट अनुरोध असफल भयो",
+
+    "no_goal": "कुनै लक्ष्य फेला परेन",
+    "goal_not_found": "लक्ष्य फेला परेन",
+    "internal_server_error": "सर्भर त्रुटि"
+  },
+  "success": {
+    "registered": "सफलतापूर्वक दर्ता गरियो",
+    "logged_in": "सफलतापूर्वक लगिन गरियो",
+    "password_reset_request": "पासवर्ड रिसेट अनुरोध सफल भयो",
+    "password_reset_successful": "पासवर्ड रिसेट सफल भयो",
+    "signout_successful": "साइनआउट सफल भयो",
+
+    "goal_updated": "लक्ष्य सफलतापूर्वक अपडेट गरियो",
+    "goal_deleted": "लक्ष्य सफलतापूर्वक हटाइयो"
+  },
+  
+    "name": "नाम",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "gender": "लिङ्ग",
+    "birthdate": "जन्म मिति",
+    "height": "उचाइ",
+    "weight": "वजन",
+
+    "distance": "दूरी",
+    "duration": "काल",
+    "date": "मिति"
   }
-}
+

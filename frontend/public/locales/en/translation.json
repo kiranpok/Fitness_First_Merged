@@ -108,7 +108,54 @@
         "distance": "Distance (km): ",
         "duration": "Duration (hours): ",
         "activities": "Total Activities: "
-      }
-  
+      },
 
-}
+
+
+
+
+      "error": {
+          "required_fields": "Please provide all the required fields",
+          "email_exists": "Email already exists",
+          "email_not_found": "Email not found",
+          "invalid_password": "Invalid password",
+          "server": "Server error",
+          "password_reset_failed": "Password reset request failed",
+          "user_not_found": "User not found",
+          "signout_failed": "Signout request failed",
+
+          "no_goal": "No such goal",
+          "goal_not_found": "Goal not found",
+          "internal_server_error": "Internal server error"
+          
+        },
+       "success": {
+          "registered": "Registered successfully",
+          "logged_in": "Logged in successfully",
+          "password_reset_request": "Password reset request successful",
+          "password_reset_successful": "Password reset successful",
+          "signout_successful": "Signout successful",
+
+          "goal_updated": "Goal updated successfully",
+          "goal_deleted": "Goal deleted successfully"
+        },
+      
+        "name": "Name",
+        "email": "Email",
+        "password": "Password",
+        "gender": "Gender",
+        "birthdate": "Birthdate",
+        "height": "Height",
+        "weight": "Weight",
+        
+        "distance": "Distance",
+        "duration": "Duration",
+        "date": "Date"
+        }
+
+      
+        
+    
+      
+
+     
