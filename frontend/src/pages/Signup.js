@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {Link, useNavigate } from "react-router-dom";
-import "../styles/Signup.css";
+import "../styles/SignUp.css";
 import Footer from "../components/Footer";
 import { useTranslation } from 'react-i18next';
 
@@ -85,7 +85,7 @@ const SignUp = () => {
             <button type="submit">{t('signup.signup')}</button>
             <div>
             <p>
-            {t('signup.account')} <Link to="/login">{t('login.login')}</Link>
+            {t('signup.account')} <Link to="/Signin">{t('login.login')}</Link>
             </p>
           </div>
           </form>

@@ -3,6 +3,8 @@ const bcrypt = require("bcryptjs");
 const User = require("../models/userModel");
 const mongoose = require("mongoose");
 const { JWT_SECRET } = require("../utils/config");
+const i18n = require("i18next");
+
 
 const createToken = (id, res) => {
   const token = jwt.sign({ userId: id }, JWT_SECRET);
@@ -28,12 +30,12 @@ const signupUser = async (req, res, next) => {
   if (!email || !password || !name) {
     return res
       .status(400)
-      .json({ message: "Please provide all the required fields" });
+      .json({ message: i18n.t("error.required_fields") });
   }
   try {
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(404).json({ message: "Email already exists" });
+      return res.status(404).json({ message: i18n.t("error.email_exists") });
     } else {
       try {
         const salt = await bcrypt.genSalt(10);
@@ -48,7 +50,7 @@ const signupUser = async (req, res, next) => {
         console.log(token);
 
         res.status(201).json({
-          message: "Registered succesfully",
+          message: i18n.t("success.registered "),
           user: {
             id: user.id,
             email: user.email,
@@ -57,11 +59,11 @@ const signupUser = async (req, res, next) => {
           token: token,
         });
       } catch (error) {
-        res.status(500).json({ message: "Server error 1", error: error });
+        res.status(500).json({ message: i18n.n("error.server"), error: error });
       }
     }
   } catch (error) {
-    res.status(500).json({ message: "Server error 2", error: error });
+    res.status(500).json({ message:  i18n.t("error.server"), error: error });
   }
 };
 
@@ -71,18 +73,18 @@ const signinUser = async (req, res, next) => {
   const user = await User.findOne({ email });
 
   if (!user) {
-    return res.status(404).json({ message: "Email not found" });
+    return res.status(404).json({ message: i18n.t("error.email_not_found") });
   }
 
   try {
     const passwordMatch = await bcrypt.compare(password, user.password);
 
     if (!passwordMatch) {
-      return res.status(401).json({ message: "Invalid password" });
+      return res.status(401).json({ message: i18n.t("error.invalid_password") });
     } else {
       const token = createToken(user.id, res);
       res.status(200).json({
-        message: "Logged in succesfully",
+        message: i18n.t("success.logged_in"),
         user: {
           id: user.id,
           email: user.email,
@@ -92,7 +94,7 @@ const signinUser = async (req, res, next) => {
       });
     }
   } catch (error) {
-    res.status(500).json({ message: "Server error" });
+    res.status(500).json({ message: i18n.t("error.server") });
   }
 };
 
@@ -104,10 +106,10 @@ const forgotPassword = async (req, res) => {
   try {
     // Implementing logic to handle the forgot password request here
     const { email } = req.body;
-    res.status(200).json({ message: "Password reset request successful" });
+    res.status(200).json({ message: i18n.t("success.password_reset_request") });
   } catch (error) {
     console.error("Forgot password error:", error);
-    res.status(500).json({ error: "Password reset request failed" });
+    res.status(500).json({ error: i18n.t("success.password_reset_request") });
   }
 };
 
@@ -116,10 +118,10 @@ const resetPassword = async (req, res) => {
   // res.json({ mssg: "reset password" });
   try {
     // Implementing logic to handle the reset password request here
-    res.status(200).json({ message: "Password reset successful" });
+    res.status(200).json({ message: i18n.t("success.password_reset_successful") });
   } catch (error) {
     console.error("Reset password error:", error);
-    res.status(500).json({ error: "Password reset failed" });
+    res.status(500).json({ error:  i18n.t("error.password_reset_failed") });
   }
 };
 // signout route
@@ -128,10 +130,10 @@ const signOutUser = async (req, res) => {
   try {
     // Implementing logic to handle the signout
 
-    res.status(200).json({ message: "Signout request successful" });
+    res.status(200).json({ message: i18n.t("success.signout_successful") });
   } catch (error) {
     console.error("Signout error:", error);
-    res.status(500).json({ error: "Signout request failed" });
+    res.status(500).json({ error: i18n("error.signout_failed") });
   }
 };
 // Controller method to fetch user profile
@@ -145,7 +147,7 @@ const getUserProfile = async (req, res) => {
     res.json(userProfile);
   } catch (error) {
     console.error("Error fetching user profile:", error);
-    res.status(500).json({ error: "Server error" });
+    res.status(500).json({ error: i18n.t("error.server") });
   }
 };
 
@@ -162,7 +164,7 @@ const updateUserProfile = async (req, res) => {
     res.json(updatedProfile);
   } catch (error) {
     console.error("Error updating user profile:", error);
-    res.status(500).json({ error: "Server error" });
+    res.status(500).json({ error: i18n.t("error.server") });
   }
 };
 
@@ -174,15 +176,16 @@ const deleteUserProfile = async (req, res) => {
     res.clearCookie("Authorization");
     const deletedProfile = await User.findByIdAndRemove(req.user.id);
     if (!deletedProfile) {
-      return res.status(404).json({ error: "User not found" });
+      return res.status(404).json({ error:i18n.t("error.user_not_found") });
     } else {
-      res.status(404).json({ message: "User not found" });
+      res.status(404).json({ message: i18n.t("error.user_not_found") });
     }
   } catch (error) {
     console.error("Error deleting user profile:", error);
-    res.status(500).json({ error: "Server error" });
+    res.status(500).json({ error: i18n.t("error.server") });
   }
 };
+
 
 module.exports = {
   signinUser,

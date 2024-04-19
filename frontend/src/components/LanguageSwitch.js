@@ -1,12 +1,8 @@
-import React, { useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
-import i18next from 'i18next'
-import cookies from 'js-cookie'
-import classNames from 'classnames'
-
-
-
-
+import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
+import cookies from 'js-cookie';
+import classNames from 'classnames';
 const languages = [
     {
         code: 'en',
@@ -43,7 +39,6 @@ const GlobeIcon = ({ width = 24, height = 24 }) => (
     const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
     const { t } = useTranslation()
   
-    
     useEffect(() => {
       console.log('Setting page stuff')
       document.body.dir = currentLanguage.dir || 'ltr'
@@ -62,7 +57,6 @@ const GlobeIcon = ({ width = 24, height = 24 }) => (
                 <GlobeIcon />
               </button>
               <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                
                 {languages.map(({ code, name, country_code }) => (
                   <li key={country_code}>
                     <a
@@ -86,6 +80,5 @@ const GlobeIcon = ({ width = 24, height = 24 }) => (
                 ))}
               </ul>
             </div>
-    
     )
   }

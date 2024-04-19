@@ -1,11 +1,26 @@
 /* home.css */
-
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('/public/fitness1.png');
+    background-size: cover; /* make the image cover the entire body */
+    background-position: center; /* center the image */
+    background-repeat: no-repeat; /* don't tile the image */
+    min-height: 50vh; /* make the body at least as tall as the viewport */
+    display: flex; /* use flexbox layout */
+    flex-direction: column; /* stack children vertically */
+    justify-content: space-between; /* put space between children */
+}
 .home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 60vh;
   align-items: center;
   padding: 20px;
+ 
+ 
 }
 
 .main-content {
@@ -37,15 +52,6 @@
   background-color: #0056b3;
 }
 
-
-.fitness-pic {
-  max-width: 600px;
-  max-height: 400px;
-  border-radius: 5px;
-  background-image: url('https://unsplash.com/photos/person-cycling-on-road-distance-with-mountain-during-daytime-VfUN94cUy4o');
-  background-size: cover;
-  background-position: center;
-}
 
 
 @media (max-width: 768px) {

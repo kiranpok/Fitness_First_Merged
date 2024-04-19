@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { updateUserProfile } from "../services/authService";
 import "../styles/userProfileEditForm.css";
+import { useTranslation } from "react-i18next";
+
 
 const UserProfileEditForm = ({ userProfileData, handleProfileUpdate, handleCancel }) => {
+  const { t } = useTranslation();
   const [showSuccessMsg, setShowSuccessMsg] = useState(false);
   const [user, setUser] = useState({
     name: "",
@@ -46,51 +49,49 @@ const UserProfileEditForm = ({ userProfileData, handleProfileUpdate, handleCance
   return (
     <div className="user-profile-edit-form">
       {showSuccessMsg && (
-        <p className="success-msg">Profile updated successfully!</p>
+        <p className="success-msg">{t('update_profile.para')}</p>
       )}
-      <h2 className="user-profile-edit-title">Update Your Profile</h2>
-      {/* Input fields for editing profile data */}
-      <input
-        type="file"
-        onChange={handleImageUpload}
-        className="input-field"
-      />
+      <h2 className="user-profile-edit-title">{t('update_profile.title')}</h2>
+      
+     
+      <label>{t('update_profile.name')}</label>
       <input
         type="text"
         onChange={(e) => setUser({ ...user, name: e.target.value })}
-        placeholder="Name"
         className="input-field"
       />
+      <label>{t('update_profile.gender')}</label>
       <input
         type="text"
         onChange={(e) => setUser({ ...user, gender: e.target.value })}
-        placeholder="Gender"
         className="input-field"
       />
+      <label>{t('update_profile.birth_date')}</label>
+
       <input
         type="text"
         onChange={(e) => setUser({ ...user, birthdate: e.target.value })}
-        placeholder="Birthdate"
         className="input-field"
       />
+      <label>{t('update_profile.height')}</label>
+
       <input
         type="text"
         onChange={(e) => setUser({ ...user, height: e.target.value })}
-        placeholder="Height (cm)"
         className="input-field"
       />
+      <label>{t('update_profile.weight')}</label>
       <input
         type="text"
         onChange={(e) => setUser({ ...user, weight: e.target.value })}
-        placeholder="Weight (kg)"
         className="input-field"
       />
       {/* Save button */}
       <button onClick={handleSave} className="save-button">
-        Update
+      {t('update_profile.update')}
       </button>
       <button onClick={handleCancel} className="cancel-button">
-        Cancel
+      {t('update_profile.cancel')}
       </button>
     </div>
   );

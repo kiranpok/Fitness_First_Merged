@@ -13,7 +13,7 @@ body {
   padding: 20px;
   background-color: #f8f9fa;
   height: 300px; /* Set the height of the footer */
-  margin-top: 50px; /* Push the footer to the bottom */
+ margin-top: 50px;
 }
 
 .social-media {

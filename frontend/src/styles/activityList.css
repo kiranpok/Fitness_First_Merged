@@ -38,6 +38,7 @@ p {
   flex-direction: column;
   margin-bottom: 20px;
   padding: 10px;
+  background-color: #ffff;
   border: 1px solid #ccc; /* Lighter Gray */
   border-radius: 5px;
 }
