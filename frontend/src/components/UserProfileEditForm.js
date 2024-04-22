@@ -23,7 +23,7 @@ const UserProfileEditForm = ({ userProfileData, handleProfileUpdate, handleCance
     });
   }, [userProfileData]);
 
-  const handleImageUpload = (e) => {
+  export const handleImageUpload = (e) => {
     setUser({ ...user, avatar: e.target.files[0] });
   };
   const handleSave = async () => {
