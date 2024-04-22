@@ -23,9 +23,9 @@ const UserProfileEditForm = ({ userProfileData, handleProfileUpdate, handleCance
     });
   }, [userProfileData]);
 
-  export const handleImageUpload = (e) => {
+ // const handleImageUpload = (e) => {
     setUser({ ...user, avatar: e.target.files[0] });
-  };
+  };//
   const handleSave = async () => {
     try {
       // Call updateUserProfile function to update the profile data
@@ -97,4 +97,4 @@ const UserProfileEditForm = ({ userProfileData, handleProfileUpdate, handleCance
   );
 };
 
-export default UserProfileEditForm;
+export default UserProfileEditForm ;
