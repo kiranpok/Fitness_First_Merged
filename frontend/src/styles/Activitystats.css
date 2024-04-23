@@ -1,9 +1,13 @@
 /* ActivityStats.css */
 
+body {
+    background-color: white;
+}
 /* Make the charts responsive */
 #distanceChart, #durationChart, #totalActivitiesChart {
     width: 100%;
     height: auto;
+
 }
 
 /* Style the container */
