@@ -16,6 +16,20 @@ const SignIn = ({ setIsSignIn, setUserEmail }) => {
   const handleSignin = async (e) => {
     e.preventDefault();
 
+    // Password strength check
+    if (password.length < 8) {
+      console.error("Password must be at least 8 characters long.");
+      return;
+    }
+
+    // Basic email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailRegex.test(email)) {
+      console.error("Invalid email format.");
+      return;
+    }
+
     try {
       // Sending a POST request to backend with email and password
       const response = await fetch("http://localhost:3001/api/user/signin", {

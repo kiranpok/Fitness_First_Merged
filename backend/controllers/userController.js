@@ -6,6 +6,11 @@ const { JWT_SECRET } = require("../utils/config");
 const i18n = require("i18next");
 
 
+// Basic email format validation function
+const isEmailValid = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+  return emailRegex.test(email);
+};
 const createToken = (id, res) => {
   const token = jwt.sign({ userId: id }, JWT_SECRET);
 
@@ -22,16 +27,48 @@ const getUserId = (req) => {
   return user.userId;
 };
 
+// Password strength check function
+const isStrongPassword = (password) => {
+  // Check if the password meets the minimum length requirement
+  if (password.length < 8) {
+    return { isValid: false, message: i18n.t("error.Password must be at least 8 characters long.") };
+  }
+
+  // Check if the password contains at least one uppercase letter, one lowercase letter, one digit, and one special character
+  const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]+$/;
+  if (!strongPasswordRegex.test(password)) {
+    return { isValid: false, message: i18n.t("error.Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character." )};
+  }
+
+  return { isValid: true };
+};
+
+
 //Register a new user:@route POST /api/user/signup
 const signupUser = async (req, res, next) => {
   console.log(req.body);
 
+
   const { name, email, password } = req.body;
+
+  /*
   if (!email || !password || !name) {
     return res
       .status(400)
       .json({ message: i18n.t("error.required_fields") });
   }
+  */
+
+  // Validate password strength
+  const passwordCheck = isStrongPassword(password);
+  if (!passwordCheck.isValid) {
+    return res.status(400).json({ message: passwordCheck.message });
+  }
+
+  if (!isEmailValid(email)) {
+    return res.status(400).json({ message: i18n.t("error.Invalid email format.") });
+  }
+
   try {
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -59,7 +96,7 @@ const signupUser = async (req, res, next) => {
           token: token,
         });
       } catch (error) {
-        res.status(500).json({ message: i18n.n("error.server"), error: error });
+        res.status(500).json({ message: i18n.t("error.server"), error: error });
       }
     }
   } catch (error) {
@@ -70,6 +107,12 @@ const signupUser = async (req, res, next) => {
 //signin route @route POST /api/user/signin
 const signinUser = async (req, res, next) => {
   const { email, password } = req.body;
+
+  // Basic email format validation
+  if (!isEmailValid(email)) {
+    return res.status(400).json({ message: i18n.t("error.Invalid email format." )});
+  }
+
   const user = await User.findOne({ email });
 
   if (!user) {
