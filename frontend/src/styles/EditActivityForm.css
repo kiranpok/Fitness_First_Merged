@@ -1,0 +1,82 @@
+/* activityList.css */
+
+.activity-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 800px;
+}
+
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.left-side,
+.right-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-line {
+    margin-bottom: 5px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.buttons button {
+    margin-left: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-prompt {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.delete-prompt button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delete-prompt button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design for smaller devices */
+@media (max-width: 768px) {
+    .activity-item {
+        flex-direction: column;
+    }
+
+    .details-line {
+        margin-bottom: 3px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .delete-prompt {
+        font-size: 14px;
+    }
+}

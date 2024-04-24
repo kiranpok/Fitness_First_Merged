@@ -5,8 +5,6 @@ import Footer from "./Footer";
 import { useTranslation } from 'react-i18next';
 
 
-
-
 const ActivityForm = () => {
   const { t } = useTranslation();
   const [activityName, setActivityName] = useState("");
@@ -72,6 +70,33 @@ const ActivityForm = () => {
       alert("Please fill in all the fields.");
     }
   };
+      /*const response = await fetch('/api/activities', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(activityData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      // Reset form fields after save
+      setActivityName("");
+      setStartTime("");
+      setSelectedDate("");
+      setSelectedActivityType("running");
+      setDuration("");
+      setDistance("");
+      setPace("");
+      setNotes("");
+
+      navigate("/activityList");
+    } else {
+      alert("Please fill in all the fields.");
+    }
+  };*/
 
   return (
     <div>

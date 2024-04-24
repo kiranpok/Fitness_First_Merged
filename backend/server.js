@@ -1,4 +1,4 @@
-require("dotenv").config();
+/*require("dotenv").config();
 const connectDB = require("./config/db");
 const express = require("express");
 const cors = require("cors");
@@ -36,6 +36,54 @@ app.use(customMiddleware.unknownEndpoint);
 
 app.use(customMiddleware.errorHandler);
 
+app.listen(port, () => console.log(`Server started on port ${port}`));
+
+module.exports = app;*/
+
+require("dotenv").config();
+const connectDB = require("./config/db");
+const express = require("express");
+const cors = require("cors");
+const customMiddleware = require("./middleware/customMiddleware");
+const userRoutes = require("./routes/userRoutes");
+const activityRoutes = require("./routes/activityRoutes");
+const goalRoutes = require("./routes/goalRoutes");
+const i18n = require('i18next');
+
+// Create an Express app
+const app = express();
+
+// Set the port number from environment variables, defaulting to 3001 if not set
+const port = process.env.PORT || 3001;
+
+// Connect to the database
+connectDB();
+
+// Middleware
+app.use(
+    cors({
+        origin: "http://localhost:3000",
+        credentials: true,
+    })
+);
+app.use(express.json()); // Parse JSON request bodies
+
+// Custom middleware
+app.use(customMiddleware.reqLogger);
+
+// Root route
+app.get("/", (req, res) => res.send(i18n.t('success.api_running')));
+
+// API routes
+app.use("/api/user", userRoutes);
+app.use("/api/activities", activityRoutes);
+app.use("/api/goals", goalRoutes);
+
+// Custom error handling middleware
+app.use(customMiddleware.unknownEndpoint);
+app.use(customMiddleware.errorHandler);
+
+// Start the server
 app.listen(port, () => console.log(`Server started on port ${port}`));
 
 module.exports = app;
