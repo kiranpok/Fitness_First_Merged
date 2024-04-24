@@ -6,6 +6,9 @@
     "header": {
       "goals": "Tavoitteet",
       "activities": "Aktiviteetit",
+      "activity_form": "Toimintalomake",
+      "activity_list": "Toimintaluettelo",
+      "activity_stats": "Aktiviteettitilastot",
       "profile": " Profiili",
       "logout": "Kirjaudu ulos",
       "login": "Kirjaudu sisään",

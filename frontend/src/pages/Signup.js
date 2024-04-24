@@ -15,6 +15,26 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Basic email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailRegex.test(email)) {
+      console.error("Invalid email format.");
+      return;
+    }
+
+    // Password strength check
+    if (password.length < 8) {
+      console.error("Password must be at least 8 characters long.");
+      return;
+    }
+
+    // Check if passwords match
+    if (password !== confirmPassword) {
+      console.error("Passwords do not match.");
+      return;
+    }
+
     try {
       const response = await fetch("http://localhost:3001/api/user/signup", {
         method: "POST",

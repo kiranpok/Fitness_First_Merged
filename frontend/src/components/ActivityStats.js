@@ -1,6 +1,7 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
+import Chart from "chart.js/auto";
 import { useTranslation } from "react-i18next";
 
 

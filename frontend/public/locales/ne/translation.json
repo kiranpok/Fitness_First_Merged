@@ -5,6 +5,9 @@
   "header": {
     "goals": "लक्ष्यहरू",
     "activities": "कृयाकलापहरू",
+    "activity_form": "कृयाकलाप फारम",
+    "activity_list": "कृयाकलाप सूची",
+    "activity_stats": "कृयाकलाप तथ्याङ्क",
     "profile": " प्रोफाइल",
     "logout": "लगआउट",
     "login": "लगइन",

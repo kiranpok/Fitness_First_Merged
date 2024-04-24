@@ -19,7 +19,7 @@
 }
 
 .nav a {
-  margin: 15px; /* This applies 0 margin top and bottom, and 15px margin left and right */
+  margin: 0 15px; /* This applies 0 margin top and bottom, and 15px margin left and right */
   text-decoration: none;
   color: #333;
 }
@@ -38,8 +38,7 @@
   right: 0;
   width: 200px;
   padding: 10px;
- 
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .nav div div a,
@@ -68,10 +67,11 @@
     align-items: flex-start;
     display: none;
   }
-.logo{
-  border: solid 1px rgb(164, 97, 17);
+  .logo {
+    border: solid 1px rgb(164, 97, 17);
     text-decoration: none;
   }
+
   .nav.open {
     display: flex;
   }
@@ -84,27 +84,57 @@
     display: flex;
     align-items: center;
     padding: 20px;
-   
   }
-  
+
   .hamburger-menu {
     display: flex;
     align-items: center;
     justify-content: center;
-   
   }
+
   .nav a {
     margin: 10px 0 0;
     text-decoration: none;
     color: #333;
   }
-  
+
   .nav div div {
     position: absolute;
     top: 100%;
     left: 60px;
     transform: translateX(-50%);
     width: 200px;
-  
   }
+
+  /* Add this to your CSS */
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
 }
