@@ -1,0 +1,63 @@
+/* editActivityForm.css */
+
+.edit-activity-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+}
+
+.edit-activity-line {
+    margin-bottom: 20px;
+}
+
+.edit-activity-line label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    display: block;
+}
+
+.edit-activity-line input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.edit-activity-button {
+    background-color: #0066ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .edit-activity-form-container {
+        padding: 10px;
+    }
+
+    .edit-activity-line {
+        margin-bottom: 10px;
+    }
+
+    .edit-activity-line label {
+        margin-bottom: 5px;
+    }
+
+    .edit-activity-line input {
+        padding: 5px;
+    }
+
+    .edit-activity-button {
+        padding: 5px 10px;
+    }
+}
+
+

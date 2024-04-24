@@ -12,7 +12,7 @@ const ActivityList = () => {
   const { t } = useTranslation();
   const [activities, setActivities] = useState([]);
   const [editActivityId, setEditActivityId] = useState(null);
-  const [showDeletePrompt, setShowDeletePrompt] = useState(false);
+  const [showDeletePrompt, setShowDeletePrompt] = useState({});
   const [deleteActivityId, setDeleteActivityId] = useState(null);
   const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ const ActivityList = () => {
   const fetchActivities = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3001/api/activities/getAll"
+          "http://localhost:3001/api/activities/getAll"
       );
       const data = await response.json();
       console.log("Fetched activities:", data);
@@ -40,7 +40,7 @@ const ActivityList = () => {
   };
 
   const handleDelete = (activityId) => {
-    setShowDeletePrompt(true);
+    setShowDeletePrompt({ ...showDeletePrompt, [activityId]: true });
     setDeleteActivityId(activityId);
   };
 
@@ -48,64 +48,64 @@ const ActivityList = () => {
     fetch(`http://localhost:3001/api/activities/delete/${deleteActivityId}`, {
       method: "DELETE",
     })
-      .then(() => {
-        console.log("Activity deleted successfully");
-        setShowDeletePrompt(false);
-        fetchActivities();
-      })
-      .catch((error) => console.error("Error deleting activity", error));
+        .then(() => {
+          console.log("Activity deleted successfully");
+          setShowDeletePrompt({ ...showDeletePrompt, [deleteActivityId]: false });
+          fetchActivities();
+        })
+        .catch((error) => console.error("Error deleting activity", error));
   };
 
   const handleDeleteCancel = () => {
-    setShowDeletePrompt(false);
+    setShowDeletePrompt({ ...showDeletePrompt, [deleteActivityId]: false });
     setDeleteActivityId(null);
   };
 
   return (
-    <div className="activity-list-container">
-      {activities.map((activity) => (
-        <div key={activity._id} className="activity-item">
-          <div className="left-side">
-            <div className="details-line">
-              <strong>{t('activity_list.name')}</strong>{activity.activityName}
-            </div>
-            <div className="details-line"><strong>{t('activity_list.activity_type')}</strong>{activity.activityType} </div>
-            <div className="details-line"><strong>{t('activity_list.distance')}</strong>{activity.distance}</div>
-            <div className="details-line"><strong>{t('activity_list.duration')}</strong> {activity.duration}</div>
-          </div>
-          <div className="right-side">
-            <div className="details-line profile-info">
-              {activity.user}<strong>{t('activity_list.date')} </strong>{new Date(activity.date).toLocaleDateString('en-GB')} | {activity.startTime}
-            </div>
-            <div className="details-line"> <strong>{t('activity_list.notes')} </strong>{activity.notes}</div>
-          </div>
-          <div className="buttons">
-            <button onClick={() => handleEdit(activity._id)}>
-              <FontAwesomeIcon icon={faEdit} /> 
-            </button>
-            <button onClick={() => handleDelete(activity._id)}>
-              <FontAwesomeIcon icon={faTrashAlt} /> 
-            </button>
-          </div>
+      <div className="activity-list-container">
+        {activities.map((activity) => (
+            <div key={activity._id} className="activity-item">
+              <div className="left-side">
+                <div className="details-line">
+                  <strong>{t('activity_list.name')}</strong>{activity.activityName}
+                </div>
+                <div className="details-line"><strong>{t('activity_list.activity_type')}</strong>{activity.activityType} </div>
+                <div className="details-line"><strong>{t('activity_list.distance')}</strong>{activity.distance}</div>
+                <div className="details-line"><strong>{t('activity_list.duration')}</strong> {activity.duration}</div>
+              </div>
+              <div className="right-side">
+                <div className="details-line profile-info">
+                  {activity.user}<strong>{t('activity_list.date')} </strong>{new Date(activity.date).toLocaleDateString('en-GB')} | {activity.startTime}
+                </div>
+                <div className="details-line"> <strong>{t('activity_list.notes')} </strong>{activity.notes}</div>
+              </div>
+              <div className="buttons">
+                <button onClick={() => handleEdit(activity._id)}>
+                  <FontAwesomeIcon icon={faEdit} />
+                </button>
+                <button onClick={() => handleDelete(activity._id)}>
+                  <FontAwesomeIcon icon={faTrashAlt} />
+                </button>
+              </div>
 
-          {editActivityId && (
-            <EditActivityForm
-              activityId={editActivityId}
-              onCancel={() => setEditActivityId(null)}
-            />
-          )}
-          {showDeletePrompt && (
-            <div className="delete-prompt">
-              <p>{t('activity_list.para')}</p>
-              <button onClick={handleDeleteConfirm}>{t('activity_list.ok')}</button>
-              <button onClick={handleDeleteCancel}>{t('activity_list.cancel')}</button>
+              {editActivityId && (
+                  <EditActivityForm
+                      activityId={editActivityId}
+                      onCancel={() => setEditActivityId(null)}
+                  />
+              )}
+              {showDeletePrompt[activity._id] && (
+                  <div className="delete-prompt">
+                    <p>{t('activity_list.para')}</p>
+                    <button onClick={handleDeleteConfirm}>{t('activity_list.ok')}</button>
+                    <button onClick={handleDeleteCancel}>{t('activity_list.cancel')}</button>
+                  </div>
+              )}
             </div>
-          )}
-        </div>
-      ))}
-      <Link to="/activityStats">Activity Stats</Link>
-      <Footer />
-    </div>
+        ))}
+        <Link to="/activityStats">Activity Stats</Link>
+        <Footer />
+      </div>
   );
 };
 

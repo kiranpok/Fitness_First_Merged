@@ -5,6 +5,9 @@
       "header": {
         "goals": "Goals",
         "activities": "Activities",
+        "activity_form": "Activity Form",
+        "activity_list": "Activity List",
+        "activity_stats": "Activity Stats",
         "profile": " Profile",
         "logout": "Logout",
         "login": "Login",
