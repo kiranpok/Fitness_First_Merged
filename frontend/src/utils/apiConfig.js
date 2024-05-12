@@ -1,13 +1,9 @@
-// apiConfig.js
-// export const REACT_APP_API_URL = "http://localhost:3001";
-
-export const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3001"; // Update with your actual backend URL
+const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3001";
 
 const ApiUtils = {
   fetchResetPassword: async (email) => {
     try {
-      // const response = await fetch(`${apiUrl}/api/resetpassword`, {
-      const response = await fetch("http://localhost:3001/api/resetpassword", {
+      const response = await fetch(`${apiUrl}/api/forgotpassword`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

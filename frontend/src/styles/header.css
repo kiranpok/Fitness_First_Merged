@@ -1,8 +1,51 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Align items vertically */
   padding: 20px;
   background-color: #f8f9fa;
+}
+
+/* Apply styles to buttons */
+.btn {
+  background-color: transparent; 
+  font-size: 12px !important; 
+  font-family: inherit;
+}
+
+.login-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.logout-btn {
+  padding-left: 10px; /* Adjust padding */
+  padding-right: 10px; /* Adjust padding */
+}
+
+/* Apply styles on hover */
+.logout-btn:hover {
+  background-color: gray;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  background-color: gray;
+}
+
+/* Adjust dropdown menu styles */
+.dropdown-menu li {
+  margin-top: 10px; /* Adjust margin */
+  border: none !important;
+}
+
+.dropdown-menu.show {
+  display: block;
+  margin-top: 30px; /* Adjust margin */
+  width: 200px;
 }
 
 .logo {
@@ -19,7 +62,7 @@
 }
 
 .nav a {
-  margin: 0 15px; /* This applies 0 margin top and bottom, and 15px margin left and right */
+  margin: 0 15px;
   text-decoration: none;
   color: #333;
 }
@@ -57,19 +100,27 @@
   display: none;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
+    padding: 10px; /* Adjust padding */
   }
 
   .nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     display: none;
   }
+
   .logo {
-    border: solid 1px rgb(164, 97, 17);
-    text-decoration: none;
+    margin-bottom: 10px; /* Adjust margin */
+  }
+
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav.open {
@@ -83,17 +134,11 @@
   .header {
     display: flex;
     align-items: center;
-    padding: 20px;
-  }
-
-  .hamburger-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px;
   }
 
   .nav a {
-    margin: 10px 0 0;
+    margin: 10px 0;
     text-decoration: none;
     color: #333;
   }
@@ -101,13 +146,12 @@
   .nav div div {
     position: absolute;
     top: 100%;
-    left: 60px;
+    left: 50%; /* Adjust position */
     transform: translateX(-50%);
     width: 200px;
   }
 
-  /* Add this to your CSS */
-
+  /* Dropdown styles */
   .dropdown {
     position: relative;
     display: inline-block;
@@ -136,5 +180,4 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
-
 }

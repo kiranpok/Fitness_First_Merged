@@ -104,7 +104,7 @@ const ActivityList = () => {
             </div>
         ))}
         <Link to="/activityStats">Activity Stats</Link>
-        <Footer />
+        
       </div>
   );
 };

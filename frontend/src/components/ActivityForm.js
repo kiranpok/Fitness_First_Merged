@@ -45,7 +45,7 @@ const ActivityForm = () => {
       };
 
       // Send the form data to a server
-      const response = await fetch('/api/activities', {
+      const response = await fetch('http://localhost:3001/api/activities', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

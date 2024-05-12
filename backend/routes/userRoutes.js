@@ -24,6 +24,7 @@ router.post("/signup", signupUser);
 // Forgot password route
 router.post("/forgotpassword", forgotPassword);
 
+
 // Reset password route
 router.post("/resetpassword", resetPassword);
 

@@ -41,7 +41,7 @@ const goalSchema = new Schema(
             default: "अवधि",
         },
         duration: {
-            type: Number,
+            type: String,
             required: true,
         },
         // Language-specific fields for duration

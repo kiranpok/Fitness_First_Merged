@@ -24,7 +24,7 @@ const GoalForm = () => {
             date,
         };
 
-        const response = await fetch('/api/goals', {
+        const response = await fetch('http://localhost:3001/api/goals', {
             method: 'POST',
             body: JSON.stringify(goal),
             headers: {
@@ -88,7 +88,7 @@ const GoalForm = () => {
                     />
                     <label>{t('goal_form.duration')} </label>
                     <input
-                        type="number"
+                        type="text"
                         placeholder=""
                         onChange={(e) => setDuration(e.target.value)}
                         value={duration}

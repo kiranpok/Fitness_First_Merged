@@ -4,16 +4,18 @@
     "description": " Saada kehosi sopimaan",
     "join_us": "Aloita nyt",
     "header": {
-      "goals": "Tavoitteet",
-      "activities": "Aktiviteetit",
-      "activity_form": "Toimintalomake",
-      "activity_list": "Toimintaluettelo",
-      "activity_stats": "Aktiviteettitilastot",
-      "profile": " Profiili",
-      "logout": "Kirjaudu ulos",
-      "login": "Kirjaudu sisään",
-      "signup": "Rekisteröidy",
-      "language": "Kieli"
+        "dashboard": "Kojelauta",
+        "my_goal": "Minun tavoite",
+        "create_goal": "Luo tavoite",
+        "add_exercise": "Lisää harjoitus",
+        "create_activity": "Luo aktiviteetti",
+        "my_activity": "Minun aktiviteetti",
+        "activity_stats": "Aktiviteetin tilastot",
+        "profile": " Profiili",
+        "logout": "Kirjaudu ulos",
+        "login": "Kirjaudu sisään",
+        "signup": "Rekisteröidy",
+        "language": "Kieli"
     },
     "login": {
       "title": "Kirjaudu sisään",

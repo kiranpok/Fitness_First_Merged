@@ -20,35 +20,40 @@ export const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setUser(JSON.parse(sessionStorage.getItem("user")));
+    const userData = JSON.parse(sessionStorage.getItem("user"));
+    if (userData) {
+      setUser(userData);
+    }
+    setIsLoading(false);
   }, []);
 
   // Function to log in the user
   const signinUser = async (email, password) => {
     try {
       const data = await signin(email, password);
-      console.log("in auth context", data);
       sessionStorage.setItem("token", data.token);
       sessionStorage.setItem("user", JSON.stringify(data.user));
-      window.location.reload();
+      setUser(data.user);
+      // Redirect or perform any other actions after sign-in
       window.location.href = "/UserProfile";
-
-      setUser(data); // Assuming the response contains token, email, and name
     } catch (error) {
       console.error("Login error:", error);
       throw error;
     }
   };
 
-  // Function to log out the user (you can implement this)
+  // Function to log out the user
   const signoutUser = () => {
     // Clear sessionStorage
     sessionStorage.removeItem("token");
     sessionStorage.removeItem("user");
+    // Clear localStorage
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     // Update the user state to null
     setUser(null);
     // Redirect or perform any other actions after sign-out
-    // For example, you can use window.location.href = "/signin";
+    window.location.href = "/signin";
   };
 
   // Function to check if the user is authenticated
@@ -56,12 +61,6 @@ export const AuthProvider = ({ children }) => {
     // Check if the user object is not null and contains necessary data
     return user !== null && user.token !== undefined;
   };
-
-  // Check if the user is already authenticated (e.g., on page reload)
-  useEffect(() => {
-    // Implement your check here (e.g., check localStorage for a token)
-    setIsLoading(false);
-  }, []);
 
   return (
     <AuthContext.Provider
@@ -71,7 +70,6 @@ export const AuthProvider = ({ children }) => {
         signoutUser,
         isAuthenticated,
         isLoading,
-        setUser,
       }}
     >
       {children}

@@ -96,10 +96,12 @@ const signupUser = async (req, res, next) => {
           token: token,
         });
       } catch (error) {
+        console.error(error);
         res.status(500).json({ message: i18n.t("error.server"), error: error });
       }
     }
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message:  i18n.t("error.server"), error: error });
   }
 };

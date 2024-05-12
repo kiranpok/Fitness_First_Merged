@@ -11,21 +11,40 @@ import { useNavigate } from 'react-router-dom';
 const Header = () => {
     const { t } = useTranslation();
     const { isAuthenticated, user, signoutUser } = useAuth();
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [activityDropdownOpen, setActivityDropdownOpen] = useState(false);
+    const [dashboardDropdownOpen, setDashboardDropdownOpen] = useState(false);
+    const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
 
-    const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
+    const toggleActivityDropdown = () => {
+        setActivityDropdownOpen(!activityDropdownOpen);
+        setDashboardDropdownOpen(false);
+        setProfileDropdownOpen(false);
+    };
+
+    const toggleDashboardDropdown = () => {
+        setDashboardDropdownOpen(!dashboardDropdownOpen);
+        setActivityDropdownOpen(false);
+        setProfileDropdownOpen(false);
+    };
+
+    const toggleProfileDropdown = () => {
+        setProfileDropdownOpen(!profileDropdownOpen);
+        setActivityDropdownOpen(false);
+        setDashboardDropdownOpen(false);
     };
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+        setActivityDropdownOpen(false);
+        setDashboardDropdownOpen(false);
+        setProfileDropdownOpen(false);
     };
 
     const handleLogout = () => {
         signoutUser();
-        navigate("/");
+        navigate("/signin");
     };
 
     return (
@@ -35,49 +54,77 @@ const Header = () => {
                 <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
             </button>
             <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
-                <Link to="/dashboard" onClick={toggleMenu}>{t('header.goals')}</Link>
-                <div className="dropdown">
-                    <span className="dropbtn">{t("header.activities")}</span>
-                    <div className={`dropdown-content ${dropdownOpen ? "show" : ""}`}>
-                        <Link to="/activityForm" onClick={toggleMenu}>
-                            {t("header.activity_form")}
-                        </Link>
-                        <Link to="/activityList" onClick={toggleMenu}>
-                            {t("header.activity_list")}
-                        </Link>
-                        <Link to="/activityStats" onClick={toggleMenu}>
-                            {t("header.activity_stats")}
-                        </Link>
-                    </div>
-                </div>
-                <div
-                    onClick={toggleDropdown}
-                    style={{ position: "relative", cursor: "pointer", marginLeft: "10px" }}
-                >
-                    <FontAwesomeIcon icon={faUser} />
-                    {dropdownOpen && (
-                        <div
-                            style={{
-                                backgroundColor: "lightblue",
-                            }}
-                        >
-                            <Link to="/profile" style={{ display: 'block' }} onClick={toggleMenu}>
-                                {t('header.profile')}
+                <div className="btn-group">
+                    <button
+                        className={`btn btn-lg dropdown-toggle ${dashboardDropdownOpen ? 'active' : ''}`}
+                        type="button"
+                        onClick={toggleDashboardDropdown}
+                    >
+                        {t("header.dashboard")}
+                    </button>
+                    <ul className={`dropdown-menu ${dashboardDropdownOpen ? 'show' : ''}`}>
+                        <li>
+                            <Link to="/activitylist" onClick={toggleMenu}>
+                                {t("header.my_activity")}
                             </Link>
-                            <button style={{ display: 'block' }} onClick={handleLogout}>
-                                {t('header.logout')}
+                        </li>
+                        <li>
+                            <Link to="/dashboard" onClick={toggleMenu}>
+                                {t("header.my_goal")}
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className="btn-group">
+                    <button
+                        className={`btn btn-lg dropdown-toggle ${activityDropdownOpen ? 'active' : ''}`}
+                        type="button"
+                        onClick={toggleActivityDropdown}
+                    >
+                        {t("header.add_exercise")}
+                    </button>
+                    <ul className={`dropdown-menu ${activityDropdownOpen ? 'show' : ''}`}>
+                        <li>
+                            <Link to="/activityForm" onClick={toggleMenu}>
+                                {t("header.create_activity")}
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/dashboard" onClick={toggleMenu}>
+                                {t("header.create_goal")}
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className="btn-group">
+                    <button
+                        className={`btn btn-lg dropdown-toggle ${profileDropdownOpen ? 'active' : ''}`}
+                        type="button"
+                        onClick={toggleProfileDropdown}
+                    >
+                        <FontAwesomeIcon icon={faUser} />
+                    </button>
+                    <ul className={`dropdown-menu ${profileDropdownOpen ? 'show' : ''}`}>
+                        <li>
+                            <Link to="/profile" onClick={toggleMenu}>
+                                {t("header.profile")}
+                            </Link>
+                        </li>
+                        <li>
+                            <button className="btn btn-lg logout-btn" onClick={handleLogout}>
+                                {t("header.logout")}
                             </button>
-                        </div>
-                    )}
+                        </li>
+                    </ul>
                 </div>
                 {isAuthenticated() ? (
                     <span style={{ display: 'inline-block', marginRight: '10px' }}>
-                        Welcome, {user.email}
+                        {t('header.welcome')}, {user.email}
                     </span>
                 ) : (
                     <>
-                        <Link to="/signin" onClick={toggleMenu}> {t('header.login')}</Link>
-                        <Link to="/signup" onClick={toggleMenu}> {t('header.signup')}</Link>
+                        <Link to="/signin" className="btn btn-lg btn-primary" onClick={toggleMenu}> {t('header.login')}</Link>
+                        <Link to="/signup" className="btn btn-lg btn-primary" onClick={toggleMenu}> {t('header.signup')}</Link>
                     </>
                 )}
                 <LanguageSwitch />
@@ -87,8 +134,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-
