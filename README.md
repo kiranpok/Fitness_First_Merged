@@ -45,7 +45,7 @@ Succes for Fitness-First means more than just a smooth launch, we’ve really ke
 
 We aim to conduct regular quality checks and take feedback to make sure our application aligns with user needs. Our team will collaborate and promise for continuous improvement throughout the application development lifecycle 
 
-#### Enhancements
+## Enhancements
 
 To further enhance Fitness-First, we're implementing the following improvements:
 
