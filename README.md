@@ -57,9 +57,8 @@ To further enhance Fitness-First, we're implementing the following improvements:
   UTF-8 encoding will be used for all supported languages.
 
 - **Testing**:
-  - *Functional Testing*: Ensuring all features work as expected using tools like `Jest` and `React Testing Library` for frontend and `Mocha` for backend.
-  - *Non-functional Testing*: Conducting performance, security, and scalability testing using tools like `JMeter` and `OWASP ZAP`.
-  
+  - *Functional Testing*: Ensuring all features work as expected using Unit Testing, Integration Testing, System Testing, and User Acceptance Testing. 
+  - *Non-functional Testing*: Conducting performance, security, Usability, and Compatability Testing.
 ### Software Architecture Diagrams
 
 #### Entity-Relationship (ER) Diagram
