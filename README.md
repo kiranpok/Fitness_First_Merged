@@ -93,7 +93,7 @@ To further enhance Fitness-First, we're implementing the following improvements:
 *Description*: The use case diagram identifies various use cases (e.g., user authentication, goal management, activity tracking) and their relationships with different actors in the Fitness-First application.
 
   
-- **Statistical Code Analysis**: Implementing static code analysis using `SonarLint` or `ESLint` for continuous code quality improvement.
+- **Statistical Code Analysis**: Implementing static code analysis using `SonarLint` for continuous code quality improvement.
   
 - **Documentation**: Enhancing documentation with API specifications, architecture overview, and user guides.
 
