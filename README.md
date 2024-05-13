@@ -58,7 +58,7 @@ To further enhance Fitness-First, we're implementing the following improvements:
 
 - **Testing**:
   - *Functional Testing*: Ensuring all features work as expected using Unit Testing, Integration Testing, System Testing, and User Acceptance Testing. 
-  - *Non-functional Testing*: Conducting performance, security, Usability, and Compatability Testing.
+  - *Non-functional Testing*: Conducting Performance Testing, Security Testing, Usability Testing, and Compatability Testing.
 ### Software Architecture Diagrams
 
 #### Entity-Relationship (ER) Diagram
