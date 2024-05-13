@@ -15,7 +15,7 @@ For individuals who prioritize their well-being and are health-conscious, this a
 #### 2. Profile Update
 #### 3. Create/Update/Delete Activities 
 #### 4. Create/Update/Delete Goals
-#### 5. Monitoring progress
+#### 5. Monitoring Progress
 #### 6. Recommendation
 #### 7. Localization
 
