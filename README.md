@@ -66,6 +66,8 @@ To further enhance Fitness-First, we're implementing the following improvements:
 
 *Description*: The ER diagram illustrates the entities and relationships in the Fitness-First database schema, showing how different entities (e.g., users, activities, goals) are connected.
 
+
+
 #### Sequence Diagram
 
 ![Sequence Diagram]
