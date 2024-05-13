@@ -64,7 +64,9 @@ To further enhance Fitness-First, we're implementing the following improvements:
 
 #### Entity-Relationship (ER) Diagram
 
-![Entity-Relationship Diagram]
+![ER](https://github.com/kiranpok/Fitness_First_Merged/assets/144848601/37c2f087-57c5-4b2d-94fa-446da414bf14)
+
+
 
 *Description*: The ER diagram illustrates the entities and relationships in the Fitness-First database schema, showing how different entities (e.g., users, activities, goals) are connected.
 
@@ -80,19 +82,21 @@ To further enhance Fitness-First, we're implementing the following improvements:
 
 #### Activity Diagram
 
-![Activity Diagram]
+![ActivityDiagramm](https://github.com/kiranpok/Fitness_First_Merged/assets/144848601/c64d985b-d5c7-4cf3-bc76-055d739065d7)
 
 *Description*: The activity diagram outlines the flow of activities and user actions within Fitness-First, providing a visual representation of how users navigate through different features.
 
 #### Deployment Diagram
 
-![Deployment Diagram]
+![image](https://github.com/kiranpok/Fitness_First_Merged/assets/144848601/364aebd7-5563-49b1-a320-4faec2916388)
+
 
 *Description*: The deployment diagram illustrates the physical deployment of software components (e.g., frontend, backend, database) across different nodes or servers in the Fitness-First system architecture.
 
 #### Use Case Diagram
 
-![Use Case Diagram]
+![Use-case](https://github.com/kiranpok/Fitness_First_Merged/assets/144848601/81a097a8-0a39-4856-ba11-116fd85acfd4)
+
 
 *Description*: The use case diagram identifies various use cases (e.g., user authentication, goal management, activity tracking) and their relationships with different actors in the Fitness-First application.
 
