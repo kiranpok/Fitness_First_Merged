@@ -11,17 +11,12 @@ For individuals who prioritize their well-being and are health-conscious, this a
 
 ## Key Features  
 
-Different Activities: option to choose different activities 
-
 #### 1. User Authentication
-
-#### 2. Creating Activities 
-
-#### 3. Creating Goals
-
-#### 4. Monitoring progress
-
-#### 5. Nutrition recommendation
+#### 2. Profile Update
+#### 3. Creating/Updating/Deleting Activities 
+#### 4. Creating/Updating/Deleting Goals
+#### 5. Monitoring progress
+#### 6. Recommendation
 
 
 ## Target Customer: 
