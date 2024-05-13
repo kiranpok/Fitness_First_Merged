@@ -17,6 +17,7 @@ For individuals who prioritize their well-being and are health-conscious, this a
 #### 4. Creating/Updating/Deleting Goals
 #### 5. Monitoring progress
 #### 6. Recommendation
+#### 7. Localization
 
 
 ## Target Customer: 
