@@ -72,7 +72,9 @@ To further enhance Fitness-First, we're implementing the following improvements:
 
 #### Sequence Diagram
 
-![Sequence Diagram]
+![Sequence Diagrams](https://github.com/kiranpok/Fitness_First_Merged/assets/144848601/a861460f-2587-4e8f-a48a-937323a0c256)
+
+
 
 *Description*: The sequence diagram depicts the interactions between various components/modules of the Fitness-First application during specific user scenarios (e.g., user goal setting, activity tracking).
 
