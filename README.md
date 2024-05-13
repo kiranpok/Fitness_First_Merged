@@ -102,7 +102,7 @@ To further enhance Fitness-First, we're implementing the following improvements:
 
 ## Setup Instructions
 
-To set up the Fitness-First-Pro project locally, follow these steps:
+To set up the Fitness-First project locally, follow these steps:
 
 1. **Clone the Repository:**
 
