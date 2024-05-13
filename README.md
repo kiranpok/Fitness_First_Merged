@@ -64,37 +64,53 @@ To further enhance Fitness-First, we're implementing the following improvements:
   
 - **Documentation**: Enhancing documentation with API specifications, architecture overview, and user guides.
 
-## Setup instructions
+## Setup Instructions
 
-To set up the Fitness-First-Pro project locally, follow these steps.
+To set up the Fitness-First-Pro project locally, follow these steps:
 
 1. **Clone the Repository:**
 
+   ```bash
    git clone https://github.com/kiranpok/Fitness_First_Merged.git
-   
-2. Navigate to the Project Directory:
-   cd fitness-first-pro
+Navigate to the Project Directory:
 
-4. Install Backend Dependencies:
-   cd Backend
-   npm install
-   
-6. Install Frontend Dependencies:
-   cd Frontend
-   npm install
-   
-8. Set Environment Variables; create a `.env` file in the root directory and configure your environment variables. 
-   Example:
-   PORT= 5000
-   MONGODB_URI=<Your MongoDB connection string>
-   
-9.  Run the Backend:
-    cd Backend
-    npm run dev
-    
-10. Run the Frontend
-    cd Frontend
-    npm start
+bash
+Copy code
+cd fitness-first-pro
+Install Backend Dependencies:
+
+bash
+Copy code
+cd Backend
+npm install
+Install Frontend Dependencies:
+
+bash
+Copy code
+cd ../Frontend
+npm install
+Set Environment Variables:
+
+Create a .env file in the root directory and configure your environment variables. For example:
+
+plaintext
+Copy code
+PORT=5000
+MONGODB_URI=<Your MongoDB connection string>
+Run the Backend:
+
+bash
+Copy code
+cd Backend
+npm run dev
+Run the Frontend:
+
+bash
+Copy code
+cd Frontend
+npm start
+vbnet
+
   
 
   
