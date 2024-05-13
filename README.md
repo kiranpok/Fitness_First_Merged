@@ -13,15 +13,15 @@ For individuals who prioritize their well-being and are health-conscious, this a
 
 Different Activities: option to choose different activities 
 
-### 1. User Authentication
+#### 1. User Authentication
 
-### 2. Creating Activities 
+#### 2. Creating Activities 
 
-### 3. Creating Goals
+#### 3. Creating Goals
 
-### 4. Monitoring progress
+#### 4. Monitoring progress
 
-### 5. Nutrition recommendation
+#### 5. Nutrition recommendation
 
 
 ## Target Customer: 
