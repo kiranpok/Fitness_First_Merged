@@ -58,7 +58,38 @@ To further enhance Fitness-First, we're implementing the following improvements:
   - *Functional Testing*: Ensuring all features work as expected using tools like `Jest` and `React Testing Library` for frontend and `Mocha` for backend.
   - *Non-functional Testing*: Conducting performance, security, and scalability testing using tools like `JMeter` and `OWASP ZAP`.
   
-- **Software Architecture Refinement**: Improving scalability and maintainability through componentization, state management, and microservices architecture.
+### Software Architecture Diagrams
+
+#### Entity-Relationship (ER) Diagram
+
+![Entity-Relationship Diagram]
+
+*Description*: The ER diagram illustrates the entities and relationships in the Fitness-First database schema, showing how different entities (e.g., users, activities, goals) are connected.
+
+#### Sequence Diagram
+
+![Sequence Diagram]
+
+*Description*: The sequence diagram depicts the interactions between various components/modules of the Fitness-First application during specific user scenarios (e.g., user goal setting, activity tracking).
+
+#### Activity Diagram
+
+![Activity Diagram]
+
+*Description*: The activity diagram outlines the flow of activities and user actions within Fitness-First, providing a visual representation of how users navigate through different features.
+
+#### Deployment Diagram
+
+![Deployment Diagram]
+
+*Description*: The deployment diagram illustrates the physical deployment of software components (e.g., frontend, backend, database) across different nodes or servers in the Fitness-First system architecture.
+
+#### Use Case Diagram
+
+![Use Case Diagram]
+
+*Description*: The use case diagram identifies various use cases (e.g., user authentication, goal management, activity tracking) and their relationships with different actors in the Fitness-First application.
+
   
 - **Statistical Code Analysis**: Implementing static code analysis using `SonarLint` or `ESLint` for continuous code quality improvement.
   
