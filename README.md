@@ -43,25 +43,58 @@ Succes for Fitness-First means more than just a smooth launch, we’ve really ke
 
 We aim to conduct regular quality checks and take feedback to make sure our application aligns with user needs. Our team will collaborate and promise for continuous improvement throughout the application development lifecycle 
 
+#### Enhancements
+
+To further enhance Fitness-First, we're implementing the following improvements:
+
+- **Localization**: Making the application accessible to users in different regions by providing multilingual support:
+  - Default Language: English (`en`)
+  - Additional Languages:
+    - Finnish (`fi`)
+    - Nepali (`ne`)  
+  UTF-8 encoding will be used for all supported languages.
+
+- **Testing**:
+  - *Functional Testing*: Ensuring all features work as expected using tools like `Jest` and `React Testing Library` for frontend and `Mocha` for backend.
+  - *Non-functional Testing*: Conducting performance, security, and scalability testing using tools like `JMeter` and `OWASP ZAP`.
+  
+- **Software Architecture Refinement**: Improving scalability and maintainability through componentization, state management, and microservices architecture.
+  
+- **Statistical Code Analysis**: Implementing static code analysis using `SonarLint` or `ESLint` for continuous code quality improvement.
+  
+- **Documentation**: Enhancing documentation with API specifications, architecture overview, and user guides.
+
 ## Setup instructions
+
 To set up the Fitness-First-Pro project locally, follow these steps.
-1. clone the Repository:
+
+1. **Clone the Repository:**
+
    git clone https://github.com/kiranpok/Fitness_First_Merged.git
+   
 2. Navigate to the Project Directory:
    cd fitness-first-pro
-4. Install Dependencies:
-    cd Backend
+
+4. Install Backend Dependencies:
+   cd Backend
    npm install
+   
+6. Install Frontend Dependencies:
    cd Frontend
    npm install
-6. Set Environment Variables; create a `.env` file in the root directory and configure your environment variables. 
+   
+8. Set Environment Variables; create a `.env` file in the root directory and configure your environment variables. 
    Example:
    PORT= 5000
    MONGODB_URI=<Your MongoDB connection string>
-8.  cd the Backend:
-9.  npm run dev
-10. cd Frontend
-11. npm start
+   
+9.  Run the Backend:
+    cd Backend
+    npm run dev
+    
+10. Run the Frontend
+    cd Frontend
+    npm start
   
 
   
