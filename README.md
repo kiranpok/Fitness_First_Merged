@@ -13,8 +13,8 @@ For individuals who prioritize their well-being and are health-conscious, this a
 
 #### 1. User Authentication
 #### 2. Profile Update
-#### 3. Creating/Updating/Deleting Activities 
-#### 4. Creating/Updating/Deleting Goals
+#### 3. Create/Update/Delete Activities 
+#### 4. Create/Update/Delete Goals
 #### 5. Monitoring progress
 #### 6. Recommendation
 #### 7. Localization
